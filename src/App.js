@@ -1,16 +1,21 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Header from './Frontend/header';
-import Footer from './Frontend/footer';
-import Index from './Frontend/index';
+import Landing from './Frontend/indexContent'
+import Product from './Frontend/productContent'
+import Faq from './Frontend/faqProduct'
+import About from './Frontend/aboutProduct'
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Index />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Landing} />
+        <Route path="/product" exact component={Product} />
+        <Route path="/faq" exact component={Faq} />
+        <Route path="/about" exact component={About} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

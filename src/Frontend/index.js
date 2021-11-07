@@ -7,10 +7,12 @@ import yellowreact from './img/part/yellow-rect.png'
 import ellipse from './img/part/ellipse.png'
 import img from './img/download.jfif'
 
+
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 
-const index = () => {
+const Index = () => {
+
     return (
         <div className="pt-32">
             <div class="container px-6 py-16 mx-auto">
@@ -18,6 +20,8 @@ const index = () => {
                     <Splide options={{
                         rewind: true,
                         gap: '1rem',
+                        arrows: 'slider',
+                        autoplay: true,
                     }}>
                         <SplideSlide>
                             <div class="flex flex-row">
@@ -146,27 +150,54 @@ const index = () => {
                         <h1 className="text-4xl text-blue-800 font-bold">What They Say?</h1>
                     </div>
                     {/* box */}
-                    <div className="flex justify-center mt-12">
-                        <div className="box-border w-full text-left h-64 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
-                                quam purus, et mattis enim blandit vitae. Nullam vel tellus libero. Curabitur non tortor quis
-                                ipsum bibendum porta. Nulla auctor est vel nunc imperdiet, ut scelerisque mi pellentesque.
-                                Praesent sed tincidunt turpis, a congue justo. Nulla facilisi. Nam aliquam cursus velit.
-                                Pellentesque placerat ipsum a nisl hendrerit, id dapibus libero tristique</p>
-                            <div className="flex flex-row mt-8">
-                                <i className="fas fa-star text-yellow-400" />
-                                <i className="fas fa-star text-yellow-400" />
-                                <i className="fas fa-star text-yellow-400" />
-                                <i className="fas fa-star text-yellow-400" />
-                                <i className="fas fa-star text-yellow-400" />
+                    <Splide>
+                        <SplideSlide>
+                            <div className="flex justify-center mt-12 p-16">
+                                <div className="box-border w-full text-left h-64 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
+                                        quam purus, et mattis enim blandit vitae. Nullam vel tellus libero. Curabitur non tortor quis
+                                        ipsum bibendum porta. Nulla auctor est vel nunc imperdiet, ut scelerisque mi pellentesque.
+                                        Praesent sed tincidunt turpis, a congue justo. Nulla facilisi. Nam aliquam cursus velit.
+                                        Pellentesque placerat ipsum a nisl hendrerit, id dapibus libero tristique</p>
+                                    <div className="flex flex-row mt-8">
+                                        <i className="fas fa-star text-yellow-400" />
+                                        <i className="fas fa-star text-yellow-400" />
+                                        <i className="fas fa-star text-yellow-400" />
+                                        <i className="fas fa-star text-yellow-400" />
+                                        <i className="fas fa-star text-yellow-400" />
+                                    </div>
+                                    <div className="flex flex-row mt-2">
+                                        <h1 className="text-lg font-medium text-blue-800">Alvin Dimas</h1>
+                                        <hr className="w-1/12 mt-4 ml-5" />
+                                    </div>
+                                    <h1 className=" font-light text-lg text-blue-800">Serawak, Malaysia</h1>
+                                </div>
                             </div>
-                            <div className="flex flex-row mt-2">
-                                <h1 className="text-lg font-medium text-blue-800">Alvin Dimas</h1>
-                                <hr className="w-1/12 mt-4 ml-5" />
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div className="flex justify-center mt-12 p-16">
+                                <div className="box-border w-full text-left h-64 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
+                                        quam purus, et mattis enim blandit vitae. Nullam vel tellus libero. Curabitur non tortor quis
+                                        ipsum bibendum porta. Nulla auctor est vel nunc imperdiet, ut scelerisque mi pellentesque.
+                                        Praesent sed tincidunt turpis, a congue justo. Nulla facilisi. Nam aliquam cursus velit.
+                                        Pellentesque placerat ipsum a nisl hendrerit, id dapibus libero tristique</p>
+                                    <div className="flex flex-row mt-8">
+                                        <i className="fas fa-star text-yellow-400" />
+                                        <i className="fas fa-star text-yellow-400" />
+                                        <i className="fas fa-star text-yellow-400" />
+                                        <i className="fas fa-star text-yellow-400" />
+                                        <i className="fas fa-star text-yellow-400" />
+                                    </div>
+                                    <div className="flex flex-row mt-2">
+                                        <h1 className="text-lg font-medium text-blue-800">Alvin Dimas</h1>
+                                        <hr className="w-1/12 mt-4 ml-5" />
+                                    </div>
+                                    <h1 className=" font-light text-lg text-blue-800">Serawak, Malaysia</h1>
+                                </div>
                             </div>
-                            <h1 className=" font-light text-lg text-blue-800">Serawak, Malaysia</h1>
-                        </div>
-                    </div>
+                        </SplideSlide>
+                    </Splide>
                 </div>
             </section>
             {/* Reach Us */}
@@ -224,4 +255,4 @@ const index = () => {
     );
 }
 
-export default index;
+export default Index;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import wa_image from './img/whatspp-icon.png'
 
 const Header = () => {
@@ -37,14 +38,14 @@ const Header = () => {
                         </div>
                         <div className="items-center lg:flex">
                             <div className="flex flex-col lg:flex-row lg:mx-24">
-                                <a className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
-                                    href="index.html">Home</a>
-                                <a className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
-                                    href="product.html">Our Product</a>
-                                <a className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
-                                    href="faq.html">FAQ</a>
-                                <a className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
-                                    href="about.html">About Us</a>
+                                <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
+                                    to="/">Home</Link>
+                                <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
+                                    to="/product">Our Product</Link>
+                                <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
+                                    to="/faq">FAQ</Link>
+                                <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
+                                    to="/about">About Us</Link>
                             </div>
 
                         </div>
