@@ -83,3 +83,12 @@
   width: 100%;
   left: 0;
 }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* contoh apply ing */
+.navbar {
+  @apply flex flex-row;
+}

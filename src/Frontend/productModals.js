@@ -1,4 +1,3 @@
-import { useState } from "react";
 import img from './img/download.jfif'
 
 const productModals = ({ closeModal }) => {

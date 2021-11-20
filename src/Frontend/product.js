@@ -6,6 +6,8 @@ import Modals from './productModals'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 const Product = () => {
     const [modal, setModal] = useState(false)
     return (
@@ -92,7 +94,7 @@ const Product = () => {
             </Splide>
             {/* BreadCrumb */}
             <section className="container mx-auto mt-12 mb-12">
-                <h1 className="font-bold text-2xl text-yellow-400"><a href className="no-underline mr-5">Home</a>/<span className="text-blue-900 ml-5">Our Product</span></h1>
+                <h1 className="font-bold text-2xl text-yellow-400"><Link to="/" className="no-underline mr-5">Home</Link>/<span className="text-blue-900 ml-5">Our Product</span></h1>
                 <hr className="w-2/12" />
             </section>
             {/* Title Quality */}
@@ -164,99 +166,117 @@ const Product = () => {
             <section className="container mx-auto mt-24 mb-12">
                 <div className="grid grid-flow-row grid-cols-3">
                     <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <a href="#">
+                        <button onClick={() => setModal(true)}>
                             <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </a>
+                        </button>
                         <div className="p-5">
-                            <a href="#">
+                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
                                 <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
                                     acquisitions 2021</h5>
-                            </a>
+                            </p>
                             <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
                                 2021 so far, in reverse chronological order.</p>
-                            <a className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                            </button>
+                            <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
                                 Read more
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <a href="#">
+                        <button onClick={() => setModal(true)}>
                             <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </a>
+                        </button>
                         <div className="p-5">
-                            <a href="#">
+                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
                                 <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
                                     acquisitions 2021</h5>
-                            </a>
+                            </p>
                             <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
                                 2021 so far, in reverse chronological order.</p>
-                            <a className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                            </button>
+                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
                                 Read more
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <a href="#">
+                        <button onClick={() => setModal(true)}>
                             <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </a>
+                        </button>
                         <div className="p-5">
-                            <a href="#">
+                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
                                 <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
                                     acquisitions 2021</h5>
-                            </a>
+                            </p>
                             <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
                                 2021 so far, in reverse chronological order.</p>
-                            <a className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                            </button>
+                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
                                 Read more
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <a href="#">
+                        <button onClick={() => setModal(true)}>
                             <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </a>
+                        </button>
                         <div className="p-5">
-                            <a href="#">
+                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
                                 <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
                                     acquisitions 2021</h5>
-                            </a>
+                            </p>
                             <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
                                 2021 so far, in reverse chronological order.</p>
-                            <a className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                            </button>
+                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
                                 Read more
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <a href="#">
+                        <button onClick={() => setModal(true)}>
                             <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </a>
+                        </button>
                         <div className="p-5">
-                            <a href="#">
+                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
                                 <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
                                     acquisitions 2021</h5>
-                            </a>
+                            </p>
                             <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
                                 2021 so far, in reverse chronological order.</p>
-                            <a className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                            </button>
+                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
                                 Read more
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <a href="#">
+                        <button onClick={() => setModal(true)}>
                             <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </a>
+                        </button>
                         <div className="p-5">
-                            <a href="#">
+                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
                                 <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
                                     acquisitions 2021</h5>
-                            </a>
+                            </p>
                             <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
                                 2021 so far, in reverse chronological order.</p>
-                            <a className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
+                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                            </button>
+                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
                                 Read more
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -271,12 +291,18 @@ const Product = () => {
                             lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
                             dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
                         <div className="button-socmed mt-12">
-                            <button className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-1" />
+                            <button className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
                                 Whatsapp</button>
-                            <button className="rounded-full ml-10 bg-gradient-to-r from-white via-pink-400 to-purple-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-1" />
+                            <button className="rounded-full ml-10 bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
                                 Instagram</button>
-                            <button className="rounded-full ml-10 bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-telegram mr-1" />
-                                Telegram </button>
+                            <button className="rounded-full ml-10 bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
+                                Facebook </button>
+                        </div>
+                        <div className="button-socmed mt-12">
+                            <button className="rounded-full ml-10 bg-red-500 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-youtube mr-3" />
+                                Youtube </button>
+                            <button className="rounded-full ml-10 bg-gray-700 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-tiktok mr-3" />
+                                Tiktok </button>
                         </div>
                     </div>
                     <div className="flex justify-end text-left w-7/12 pt-8">

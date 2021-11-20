@@ -118,12 +118,18 @@ const Faq = () => {
                             lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
                             dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
                         <div className="button-socmed mt-12">
-                            <button className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-1" />
+                            <button className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
                                 Whatsapp</button>
-                            <button className="rounded-full ml-10 bg-gradient-to-r from-white via-pink-400 to-purple-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-1" />
+                            <button className="rounded-full ml-10 bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
                                 Instagram</button>
-                            <button className="rounded-full ml-10 bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-telegram mr-1" />
-                                Telegram </button>
+                            <button className="rounded-full ml-10 bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
+                                Facebook </button>
+                        </div>
+                        <div className="button-socmed mt-12">
+                            <button className="rounded-full ml-10 bg-red-500 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-youtube mr-3" />
+                                Youtube </button>
+                            <button className="rounded-full ml-10 bg-gray-700 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-tiktok mr-3" />
+                                Tiktok </button>
                         </div>
                     </div>
                     <div className="flex justify-end text-left w-7/12 pt-8">

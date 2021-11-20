@@ -4,8 +4,24 @@ import kemendag from './img/kemendag.png'
 import kemenkunham from './img/Kemenhukham.png'
 import sucofindo from './img/sucofindo.png'
 import beacukai from './img/beacukai.png'
+import Founder from './img/founder.jpg'
+import { Gmaps, Marker, InfoWindow, Circle } from 'react-gmaps';
+import GoogleMapReact from 'google-map-react';
 
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const coords = {
+    lat: -7.649067,
+    lng: 112.905622,
+};
+const params = { v: '3.exp', key: 'AIzaSyA4aBX3OyAZLYN4H1CJ5vU_zsFZEEHiTjc' };
 const About = () => {
+    const defaultProps = {
+        center: {
+            lat: -7.649067,
+            lng: 112.905622
+        },
+        zoom: 11
+    };
     return (
         <div className="pt-32">
             <div className="container px-6 py-16 mx-auto">
@@ -53,9 +69,29 @@ const About = () => {
                     </div>
                 </div>
             </section>
+            {/* Founder */}
+            <section className="container mx-auto mt-24 mb-12">
+                <div class="flex flex-row justify-center">
+                    <div class="flex flex-col justified-center">
+                        <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
+                        <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Founder</h1>
+                        <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Alvin Dimas Satria</p></button>
+                    </div>
+                    <div class="flex flex-col justified-center">
+                        <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
+                        <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Co-Founder</h1>
+                        <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Alvin Dimas Satria</p></button>
+                    </div>
+                    <div class="flex flex-col justified-center">
+                        <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
+                        <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">CTO</h1>
+                        <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Alvin Dimas Satria</p></button>
+                    </div>
+                </div>
+            </section>
             {/* Form and Map */}
             <section className="container mx-auto mt-24 mb-12">
-                <div className="flex flex-row">
+                <div className="flex flex-row justify-center">
                     {/* Form */}
                     <div className="w-1/2">
                         <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white">Get in touch</h2>
@@ -103,11 +139,9 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Map */}
-                    <div className="w-1/2">
-                    </div>
                 </div>
             </section>
+
             {/* Contact */}
             <section className="container mx-auto mt-10">
                 <div className="flex justify-start mr-24">
@@ -118,12 +152,18 @@ const About = () => {
                             lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
                             dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
                         <div className="button-socmed mt-12">
-                            <button className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-1" />
+                            <button className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
                                 Whatsapp</button>
-                            <button className="rounded-full ml-10 bg-gradient-to-r from-white via-pink-400 to-purple-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-1" />
+                            <button className="rounded-full ml-10 bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
                                 Instagram</button>
-                            <button className="rounded-full ml-10 bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-telegram mr-1" />
-                                Telegram </button>
+                            <button className="rounded-full ml-10 bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
+                                Facebook </button>
+                        </div>
+                        <div className="button-socmed mt-12">
+                            <button className="rounded-full ml-10 bg-red-500 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-youtube mr-3" />
+                                Youtube </button>
+                            <button className="rounded-full ml-10 bg-gray-700 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-tiktok mr-3" />
+                                Tiktok </button>
                         </div>
                     </div>
                     <div className="flex justify-end text-left w-7/12 pt-8">
