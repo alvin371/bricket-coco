@@ -9,11 +9,11 @@ const footer = () => {
                         </div>
                         <div class="flex flex-col ml-96">
                             <div class="flex text-white font-light text-base mb-4">
-                                <a href="" class="">Careers</a>
+                                <button href="" class="">Careers</button>
                                 <span class="px-5">|</span>
-                                <a href="">Privacy Policy</a>
+                                <button href="">Privacy Policy</button>
                                 <span class="px-5">|</span>
-                                <a href="">Terms and Conditions</a>
+                                <button href="">Terms and Conditions</button>
                             </div>
                             <div class="flex justify-center text-white font-light text-base">
                                 © 2021 Global Coco Perkasa Inc

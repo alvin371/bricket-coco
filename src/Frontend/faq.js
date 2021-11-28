@@ -1,32 +1,58 @@
 import img from './img/faq.png'
 
-const minArrow = () => {
-    return (
-        <div>
-            <span className="h-6 w-6 flex items-center justify-center text-teal-500">
-                <svg className="w-3 h-3 fill-current" viewBox="0 -192 469.33333 469" xmlns="http://www.w3.org/2000/svg">
-                    <path d="m437.332031.167969h-405.332031c-17.664062 0-32 14.335937-32 32v21.332031c0 17.664062 14.335938 32 32 32h405.332031c17.664063 0 32-14.335938 32-32v-21.332031c0-17.664063-14.335937-32-32-32zm0 0" />
-                </svg>
-            </span>
-
-        </div>
-    )
-}
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/splide.min.css';
 
 const Faq = () => {
     return (
         <div className="pt-32">
-            <div className="container px-6 py-16 mx-auto">
-                <div className="items-center lg:flex">
-                    <div className="w-full lg:w-1/2">
-                        <div className="lg:max-w-lg">
-                            <h1 className="text-2xl font-bold text-blue-800 uppercase dark:text-white lg:text-9xl">FAQ</h1>
-                            <hr className="w-4/6 bg-blue-800 h-3 mt-8" />
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 bg-white">
-                        <img className=" h-full lg:max-w-2xl p-5" src={img} alt="Catalogue-pana.svg" />
-                    </div>
+            <div class="container px-6 py-2 mx-auto">
+                <div class="items-center lg:flex">
+                    <Splide options={{
+                        rewind: true,
+                        gap: '1rem',
+                        arrows: 'slider',
+                        autoplay: true,
+                    }}>
+                        <SplideSlide>
+                            <div class="navbar">
+                                <div class="lg:max-w-lg text-left absolute left-32 top-24 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
+                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
+                                        perspiciatis optio.</p>
+                                    <button
+                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
+                                        Now</button>
+                                </div>
+                                <div class="flex justify-center mx-auto">
+                                    <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 bg-white">
+                                        <img className=" h-full lg:max-w-2xl p-5" src={img} alt="Catalogue-pana.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div class="navbar">
+                                <div class="lg:max-w-lg text-left absolute left-32 top-24 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
+                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
+                                        perspiciatis optio.</p>
+                                    <button
+                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
+                                        Now</button>
+                                </div>
+                                <div class="flex justify-center mx-auto">
+                                    <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 bg-white">
+                                        <img className=" h-full lg:max-w-2xl p-5" src={img} alt="Catalogue-pana.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </SplideSlide>
+                    </Splide>
                 </div>
             </div>
 
@@ -117,18 +143,16 @@ const Faq = () => {
                             elementum. Curabitur
                             lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
                             dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
-                        <div className="button-socmed mt-12">
-                            <button className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
-                                Whatsapp</button>
-                            <button className="rounded-full ml-10 bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
-                                Instagram</button>
-                            <button className="rounded-full ml-10 bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
-                                Facebook </button>
-                        </div>
-                        <div className="button-socmed mt-12">
-                            <button className="rounded-full ml-10 bg-red-500 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-youtube mr-3" />
-                                Youtube </button>
-                            <button className="rounded-full ml-10 bg-gray-700 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-tiktok mr-3" />
+                        <div class="grid grid-cols-3 gap-4 mt-10">
+                            <a href="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
+                                Whatsapp</a>
+                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
+                                Instagram</a>
+                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
+                                Facebook </a>
+                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-9"><i className="fab fa-youtube mr-3" />
+                                Youtube </a>
+                            <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-9"><i className="fab fa-tiktok mr-3" />
                                 Tiktok </button>
                         </div>
                     </div>

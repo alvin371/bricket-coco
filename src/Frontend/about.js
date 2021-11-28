@@ -4,38 +4,61 @@ import kemendag from './img/kemendag.png'
 import kemenkunham from './img/Kemenhukham.png'
 import sucofindo from './img/sucofindo.png'
 import beacukai from './img/beacukai.png'
-import Founder from './img/founder.jpg'
-import { Gmaps, Marker, InfoWindow, Circle } from 'react-gmaps';
-import GoogleMapReact from 'google-map-react';
+import Founder from './img/user-icon.png'
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-const coords = {
-    lat: -7.649067,
-    lng: 112.905622,
-};
-const params = { v: '3.exp', key: 'AIzaSyA4aBX3OyAZLYN4H1CJ5vU_zsFZEEHiTjc' };
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/splide.min.css';
+
 const About = () => {
-    const defaultProps = {
-        center: {
-            lat: -7.649067,
-            lng: 112.905622
-        },
-        zoom: 11
-    };
     return (
         <div className="pt-32">
-            <div className="container px-6 py-16 mx-auto">
-                <div className="items-center lg:flex">
-                    <div className="w-full lg:w-1/2">
-                        <div className="lg:max-w-lg">
-                            <h1 className="text-2xl font-bold text-blue-800 uppercase dark:text-white lg:text-9xl">Our Company
-                            </h1>
-                            <hr className="w-4/6 bg-blue-800 h-3 mt-8" />
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 bg-white">
-                        <img className=" h-full lg:max-w-2xl p-5" src={img} alt="Catalogue-pana.svg" />
-                    </div>
+            <div class="container px-6 py-2 mx-auto">
+                <div class="items-center lg:flex">
+                    <Splide options={{
+                        rewind: true,
+                        gap: '1rem',
+                        arrows: 'slider',
+                        autoplay: true,
+                    }}>
+                        <SplideSlide>
+                            <div class="navbar">
+                                <div class="lg:max-w-lg text-left absolute left-32 top-24 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
+                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
+                                        perspiciatis optio.</p>
+                                    <button
+                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
+                                        Now</button>
+                                </div>
+                                <div class="flex justify-center mx-auto">
+                                    <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 bg-white">
+                                        <img className=" h-full lg:max-w-2xl p-5" src={img} alt="Catalogue-pana.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div class="navbar">
+                                <div class="lg:max-w-lg text-left absolute left-32 top-24 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
+                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
+                                        perspiciatis optio.</p>
+                                    <button
+                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
+                                        Now</button>
+                                </div>
+                                <div class="flex justify-center mx-auto">
+                                    <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 bg-white">
+                                        <img className=" h-full lg:max-w-2xl p-5" src={img} alt="Catalogue-pana.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </SplideSlide>
+                    </Splide>
                 </div>
             </div>
             {/* Company Profile */}
@@ -75,17 +98,17 @@ const About = () => {
                     <div class="flex flex-col justified-center">
                         <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
                         <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Founder</h1>
-                        <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Alvin Dimas Satria</p></button>
+                        <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Yasa Wahyudi</p></button>
                     </div>
                     <div class="flex flex-col justified-center">
                         <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
-                        <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Co-Founder</h1>
-                        <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Alvin Dimas Satria</p></button>
+                        <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Product Development And Logistics</h1>
+                        <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Revoliansyah Nur Rasyid</p></button>
                     </div>
                     <div class="flex flex-col justified-center">
                         <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
-                        <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">CTO</h1>
-                        <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Alvin Dimas Satria</p></button>
+                        <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Bussiness And Legal</h1>
+                        <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Elsa Ansori</p></button>
                     </div>
                 </div>
             </section>
@@ -98,25 +121,25 @@ const About = () => {
                         <p className="mt-3 text-center text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur,
                             adipisicing elit.</p>
                         <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
-                            <a href="#" className="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
+                            <button className="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
                                 <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                                 </svg>
                                 <span className="mt-2">121 Street, NY</span>
-                            </a>
-                            <a href="#" className="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
+                            </button>
+                            <button className="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
                                 <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                 </svg>
                                 <span className="mt-2">+2499999666600</span>
-                            </a>
-                            <a href="#" className="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
+                            </button>
+                            <button className="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
                                 <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                 </svg>
                                 <span className="mt-2">example@example.com</span>
-                            </a>
+                            </button>
                         </div>
                         <div className="mt-6 ">
                             <div className="items-center -mx-2 md:flex">
@@ -151,18 +174,16 @@ const About = () => {
                             elementum. Curabitur
                             lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
                             dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
-                        <div className="button-socmed mt-12">
-                            <button className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
-                                Whatsapp</button>
-                            <button className="rounded-full ml-10 bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
-                                Instagram</button>
-                            <button className="rounded-full ml-10 bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
-                                Facebook </button>
-                        </div>
-                        <div className="button-socmed mt-12">
-                            <button className="rounded-full ml-10 bg-red-500 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-youtube mr-3" />
-                                Youtube </button>
-                            <button className="rounded-full ml-10 bg-gray-700 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-tiktok mr-3" />
+                        <div class="grid grid-cols-3 gap-4 mt-10">
+                            <a href="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
+                                Whatsapp</a>
+                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
+                                Instagram</a>
+                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
+                                Facebook </a>
+                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-9"><i className="fab fa-youtube mr-3" />
+                                Youtube </a>
+                            <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-9"><i className="fab fa-tiktok mr-3" />
                                 Tiktok </button>
                         </div>
                     </div>

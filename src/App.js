@@ -9,7 +9,6 @@ import Dashboard from "./Backend/views/Dashboard.js";
 import Login from "./Backend/views/Login.js";
 import ProductList from "./Backend/views/Product.js";
 import ProductHighlights from "./Backend/views/ProductHighlights.js";
-import Sidebar from "./Backend/components/Sidebar.js";
 import AskedQuestion from "./Backend/views/Faq.js";
 import QuestionList from "./Backend/views/QuestionList.js";
 import HomePage from "./Backend/views/HomePage.js";

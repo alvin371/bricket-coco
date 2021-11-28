@@ -5,8 +5,9 @@ import owner from './img/part/owner-photo.png'
 import bluereact from './img/part/blue-rect.png'
 import yellowreact from './img/part/yellow-rect.png'
 import ellipse from './img/part/ellipse.png'
-import img from './img/download.jfif'
 
+import video1 from './img/video1.mp4'
+import video2 from './img/video2.mp4'
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
@@ -14,7 +15,7 @@ import '@splidejs/splide/dist/css/splide.min.css';
 const Index = () => {
 
     return (
-        <div className="pt-32">
+        <div className="lg:pt-64 2xl:pt-8">
             <div class="container px-6 py-16 mx-auto">
                 <div class="items-center lg:flex">
                     <Splide options={{
@@ -25,20 +26,39 @@ const Index = () => {
                     }}>
                         <SplideSlide>
                             <div class="navbar">
-                                <div class="w-full pl-32 pt-10 lg:w-1/2 sm:w-1/12">
-                                    <div class="lg:max-w-lg text-left">
-                                        <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
-                                            class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
-                                        <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
-                                            perspiciatis optio.</p>
-                                        <button
-                                            class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
-                                            Now</button>
-                                    </div>
+                                <div class="lg:max-w-lg text-left absolute left-32 top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
+                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
+                                        perspiciatis optio.</p>
+                                    <button
+                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
+                                        Now</button>
                                 </div>
-                                <div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2 sm:w-full">
-                                    <img class="lg:w-3/5 lg:h-10/12 shadow-lg sm:w-64 sm:h-full" src={img} alt="Catalogue-pana.svg" />
+                                <div class="flex justify-center mx-auto">
+                                    <video class="aligns-center w-full h-auto" autoPlay={true} muted loop>
+                                        <source src={video1} type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div class="navbar">
+                                <div class="lg:max-w-lg text-left absolute left-32 top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
+                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
+                                        perspiciatis optio.</p>
+                                    <button
+                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
+                                        Now</button>
+                                </div>
+                                <div class="flex justify-center mx-auto">
+                                    <video class="aligns-center w-full h-auto" autoPlay={true} muted loop>
+                                        <source src={video2} type="video/mp4" />
+                                    </video>
                                 </div>
                             </div>
                         </SplideSlide>
@@ -47,7 +67,7 @@ const Index = () => {
             </div>
 
             {/* Greetings */}
-            <section className="container mx-auto my-12">
+            <section className="container mx-auto my-4">
                 <div className="flex flex-col justify-center">
                     <h1 className="font-bold text-center text-3xl text-blue-900">All Type Bracket <span className="text-yellow-500">with
                         Premium
@@ -84,7 +104,7 @@ const Index = () => {
             {/* VideoPlayer */}
             <section className="container mx-auto mt-28">
                 <div className="flex">
-                    <div className="relative w-full text-left">
+                    <div className="relative w-full text-left ml-14">
                         <img src={ellipse} alt="" className="absolute part-vid-capt" />
                         <h1 className="font-bold text-3xl text-blue-900 w-3/5 z-10">
                             Lorem ipsum dolor sit amet, consect.<span className="text-yellow-500"> Focus on Quality
@@ -106,7 +126,7 @@ const Index = () => {
             {/* Owner Said */}
             <section className="container mx-auto mt-24 mb-12">
                 <div className="flex w-full text-left">
-                    <div className="w-1/2 py-24">
+                    <div className="w-1/2 py-24 ml-14">
                         <h1 className="text-blue-900 font-bold text-3xl w-3/5 leading-normal"><span className="text-yellow-500">Commitmen</span> to Provide Best Quality</h1>
                         <p className="font-regular text-lg mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in
                             vestibulum nibh. Morbi euismod quam
@@ -133,7 +153,7 @@ const Index = () => {
                     {/* box */}
                     <Splide>
                         <SplideSlide>
-                            <div className="flex justify-center mt-12 p-16">
+                            <div className="flex justify-center p-16">
                                 <div className="box-border w-full text-left h-64 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
                                         quam purus, et mattis enim blandit vitae. Nullam vel tellus libero. Curabitur non tortor quis
@@ -156,7 +176,7 @@ const Index = () => {
                             </div>
                         </SplideSlide>
                         <SplideSlide>
-                            <div className="flex justify-center mt-12 p-16">
+                            <div className="flex justify-center p-16">
                                 <div className="box-border w-full text-left h-64 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
                                         quam purus, et mattis enim blandit vitae. Nullam vel tellus libero. Curabitur non tortor quis
@@ -201,18 +221,16 @@ const Index = () => {
                             elementum. Curabitur
                             lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
                             dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
-                        <div className="button-socmed mt-12">
-                            <button className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
-                                Whatsapp</button>
-                            <button className="rounded-full ml-10 bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
-                                Instagram</button>
-                            <button className="rounded-full ml-10 bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
-                                Facebook </button>
-                        </div>
-                        <div className="button-socmed mt-12">
-                            <button className="rounded-full ml-10 bg-red-500 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-youtube mr-3" />
-                                Youtube </button>
-                            <button className="rounded-full ml-10 bg-gray-700 font-bold text-white py-3 px-9 w-2/5"><i className="fab fa-tiktok mr-3" />
+                        <div class="grid grid-cols-3 gap-4 mt-10">
+                            <a href="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
+                                Whatsapp</a>
+                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
+                                Instagram</a>
+                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
+                                Facebook </a>
+                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-9"><i className="fab fa-youtube mr-3" />
+                                Youtube </a>
+                            <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-9"><i className="fab fa-tiktok mr-3" />
                                 Tiktok </button>
                         </div>
                     </div>

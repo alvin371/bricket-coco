@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import wa_image from './img/whatspp-icon.png'
 
 const Header = () => {
     const [navbar, setNavbar] = useState(false)
@@ -15,9 +14,9 @@ const Header = () => {
     window.addEventListener('scroll', changeBackground)
     return (
         <div className="relative">
-            <Link to="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="flex flex-row w-24 h-auto top-28 right-5 fixed bg-green-500 hover:bg-green-400 px-3 py-4 w-44 rounded-tl-full rounded-bl-full rounded-br-full z-100">
+            <a href="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="flex flex-row w-24 h-auto top-28 right-5 fixed bg-green-500 hover:bg-green-400 px-3 py-4 w-44 rounded-tl-full rounded-bl-full rounded-br-full z-100">
                 <p className="text-white font-bold text-medium"><i className="fab fa-whatsapp text-xl mx-2"></i>Reach Us Here!</p>
-            </Link>
+            </a>
             <header className="absolute z-100 bg-white dark:bg-gray-800 pb-9">
                 <nav className={navbar ? 'fixed w-full bg-gray-900 shadow-lg' : 'fixed w-full bg-white-700 shadow-lg'}>
                     <div className="container px-6 py-3 mx-auto lg:flex lg:justify-between lg:items-center">
@@ -63,7 +62,10 @@ const Header = () => {
                                 <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
                                     to="/about">About Us</Link>
                             </div>
-
+                        </div>
+                        <div className="items-end">
+                            <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
+                                to="/login">Login</Link>
                         </div>
                     </div>
                 </nav>
