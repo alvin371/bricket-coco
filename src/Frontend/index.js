@@ -13,7 +13,6 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 
 const Index = () => {
-
     return (
         <div className="lg:pt-64 2xl:pt-8">
             <div class="container px-6 py-16 mx-auto">
