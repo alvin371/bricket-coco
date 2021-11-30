@@ -8,6 +8,10 @@
   right: 55px;
 }
 
+.ways {
+  display: none;
+}
+
 .part-vid-capt {
   z-index: -1;
   top: -29px;
