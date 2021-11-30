@@ -23,7 +23,7 @@ const Header = () => {
                         <div className="flex items-center justify-between">
                             <div>
                                 <Link to="/" className={navbar ? 'text-2xl font-bold text-white dark:text-white lg:text-3xl hover:text-gray-300 dark:hover:text-gray-300' : 'text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300'}
-                                >Global Coco Perkasa</Link>
+                                >Java Agro Globalindo</Link>
                             </div>
                             <div className="flex lg:hidden">
                                 <button type="button"

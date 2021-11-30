@@ -131,3 +131,5 @@
 .navbar {
   @apply flex flex-row relative;
 }
+
+/* media query */

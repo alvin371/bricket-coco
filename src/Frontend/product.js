@@ -1,7 +1,6 @@
 import video1 from './img/video1.mp4'
 import video2 from './img/video2.mp4'
 import sun from './img/part/Sun.png'
-import { AnimatePresence } from 'framer-motion'
 
 import Modals from './productModals'
 import { Splide, SplideSlide } from '@splidejs/react-splide';

@@ -1,6 +1,6 @@
 import img from './img/download.jfif'
 
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const productModals = ({ closeModal }) => {
     return (
