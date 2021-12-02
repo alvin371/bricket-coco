@@ -11,8 +11,8 @@ import '@splidejs/splide/dist/css/splide.min.css';
 
 const About = () => {
     return (
-        <div className="pt-32">
-            <div class="container px-6 py-2 mx-auto">
+        <div className="pt-32 w-screen overflow-x-hidden">
+            <div class="container px-6 py-2 mx-auto ">
                 <div class="items-center lg:flex">
                     <Splide options={{
                         rewind: true,
@@ -22,14 +22,14 @@ const About = () => {
                     }}>
                         <SplideSlide>
                             <div class="navbar">
-                                <div class="lg:max-w-lg text-left absolute left-32 top-24 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
-                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                                <div class="w-4/5 sm:max-w-lg text-left absolute left-11 md:left-32 md:top-24 sm:top-20 top-2 bg-gray-50 bg-opacity-90 shadow-lg md:p-5 p-2 rounded-lg">
+                                    <h1 class="text-base sm:text-xl xl:text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
                                         class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
-                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
                                         adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
                                         perspiciatis optio.</p>
                                     <button
-                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
+                                        class="w-full px-8 sm:py-4 py-2 sm:mt-6 mt-2 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
                                         Now</button>
                                 </div>
                                 <div class="flex justify-center mx-auto">
@@ -41,14 +41,14 @@ const About = () => {
                         </SplideSlide>
                         <SplideSlide>
                             <div class="navbar">
-                                <div class="lg:max-w-lg text-left absolute left-32 top-24 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
-                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                                <div class="w-4/5 sm:max-w-lg text-left absolute left-11 md:left-32 md:top-24 sm:top-20 top-2 bg-gray-50 bg-opacity-90 shadow-lg md:p-5 p-2 rounded-lg">
+                                    <h1 class="text-base sm:text-xl xl:text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
                                         class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
-                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
                                         adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
                                         perspiciatis optio.</p>
                                     <button
-                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
+                                        class="w-full px-8 sm:py-4 py-2 sm:mt-6 mt-2 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
                                         Now</button>
                                 </div>
                                 <div class="flex justify-center mx-auto">
@@ -63,12 +63,12 @@ const About = () => {
             </div>
             {/* Company Profile */}
             <section className="container mx-auto">
-                <div className="flex">
-                    <div className="w-1/2">
-                        <img src={company} alt="" className="w-4/5 h-4/5 shadow-lg" />
+                <div className="grid grid-cols-1 sm:flex">
+                    <div className=" sm:w-1/2">
+                        <img src={company} alt="" className="m-5 sm:w-4/5 h-4/5 shadow-lg" />
                     </div>
-                    <div className="w-1/2">
-                        <p className="text-left font-normal text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <div className=" sm:w-1/2">
+                        <p className="text-left font-normal text-base mx-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Proin venenatis sed magna at pharetra. Nulla
                             hendrerit, libero sed rhoncus hendrerit, felis mi volutpat tellus, ut efficitur mi est id lectus.
                             Nullam et auctor nisi, id placerat augue. Donec vitae metus at augue luctus porttitor. Vestibulum
@@ -84,28 +84,28 @@ const About = () => {
                     <div className>
                         <h1 className="font-bold text-4xl text-center mb-10">We Are Registered On</h1>
                     </div>
-                    <div className="flex flex-row justify-start">
-                        <img src={kemendag} className="w-1/6 h-32 mx-7" alt="" />
-                        <img src={kemenkunham} className="w-1/6 h-32 mx-7" alt="" />
-                        <img src={sucofindo} className="w-1/6 h-32 mx-7" alt="" />
-                        <img src={beacukai} className="w-3/5 h-32 mx-7" alt="" />
+                    <div className="xl:flex xl:flex-row xl:justify-start grid grid-cols-6 lg:grid-cols-2">
+                        <img src={kemendag} className="col-start-2 col-span-4 lg:col-auto xl:w-auto xl:h-32 xl:m-5 " alt="" />
+                        <img src={kemenkunham} className="col-start-1 col-span-3 lg:col-auto xl:w-auto xl:h-32 xl:m-5" alt="" />
+                        <img src={sucofindo} className="col-end-6 col-span-2 lg:col-auto xl:w-auto xl:h-32 xl:m-5" alt="" />
+                        <img src={beacukai} className="col-start-2 col-span-5 lg:col-auto xl:w-auto xl:h-32 xl:m-5" alt="" />
                     </div>
                 </div>
             </section>
             {/* Founder */}
             <section className="container mx-auto mt-24 mb-12">
-                <div class="flex flex-row justify-center">
-                    <div class="flex flex-col justified-center">
+                <div class="grid grid-cols-1 lg:flex lg:flex-row lg:justify-center justify-items-center">
+                    <div class="flex flex-col justified-center my-5">
                         <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
                         <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Founder</h1>
                         <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Yasa Wahyudi</p></button>
                     </div>
-                    <div class="flex flex-col justified-center">
+                    <div class="flex flex-col justified-center my-5">
                         <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
                         <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Product Development And Logistics</h1>
                         <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Revoliansyah Nur Rasyid</p></button>
                     </div>
-                    <div class="flex flex-col justified-center">
+                    <div class="flex flex-col justified-center my-5">
                         <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
                         <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Bussiness And Legal</h1>
                         <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Elsa Ansori</p></button>
@@ -116,7 +116,7 @@ const About = () => {
             <section className="container mx-auto mt-24 mb-12">
                 <div className="flex flex-row justify-center">
                     {/* Form */}
-                    <div className="w-1/2">
+                    <div className="lg:w-1/2 md:w-3/4 w-5/6">
                         <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white">Get in touch</h2>
                         <p className="mt-3 text-center text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur,
                             adipisicing elit.</p>
@@ -167,14 +167,14 @@ const About = () => {
 
             {/* Contact */}
             <section className="container mx-auto mt-10">
-                <div className="flex justify-start mr-24">
-                    <div className="text-center w-5/12">
+                <div className="grid grid-cols-1 lg:flex lg:justify-start lg:mr-24 mr-0">
+                    <div className="text-center w-full lg:w-6/12 lg:mx-0 xl:mx-8 xl:w-5/12">
                         <h1 className=" text-2xl font-bold">PT. Global Coco Perkasa</h1>
                         <p className="mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus eget nulla eu
                             elementum. Curabitur
                             lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
                             dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
-                        <div class="grid grid-cols-3 gap-4 mt-10">
+                         <div class="grid grid-cols-3 text-xs lg:text-base gap-3 mt-10">
                             <a href="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
                                 Whatsapp</a>
                             <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
@@ -187,8 +187,8 @@ const About = () => {
                                 Tiktok </button>
                         </div>
                     </div>
-                    <div className="flex justify-end text-left w-7/12 pt-8">
-                        <table className="border-0">
+                    <div className="flex lg:justify-end justify-center w-full lg:w-7/12 pt-8">
+                        <table className="border-0 text-left text-xs sm:text-base">
                             <tbody><tr>
                                 <td className="px-4">Main Office</td>
                                 <td className="px-4">: Pasuruan - Indonesia</td>

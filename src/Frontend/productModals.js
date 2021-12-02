@@ -20,7 +20,7 @@ const productModals = ({ closeModal }) => {
                     animate={{
                         scale: 1
                     }}
-                    className="relative w-auto my-6 mx-auto max-w-3xl">
+                    className="relative w-auto my-6 mx-auto max-w-xs md:max-w-xl xl:max-w-3xl">
                     {/*content*/}
                     <motion.div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                         {/*header*/}

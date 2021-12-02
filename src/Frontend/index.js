@@ -14,8 +14,8 @@ import '@splidejs/splide/dist/css/splide.min.css';
 
 const Index = () => {
     return (
-        <div className="lg:pt-64 2xl:pt-8">
-            <div class="container px-6 py-16 mx-auto">
+        <div className="w-screen overflow-x-hidden lg:pt-64 2xl:pt-8">
+            <div class="container px-6 py-16 mx-auto ">
                 <div class="items-center lg:flex">
                     <Splide options={{
                         rewind: true,
@@ -25,15 +25,15 @@ const Index = () => {
                     }}>
                         <SplideSlide>
                             <div class="navbar">
-                                <div class="lg:max-w-lg text-left absolute left-32 top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
-                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                                <div class="invisible sm:visible sm:w-2/5 md:w-4/12 lg:w-3/5 sm:max-w-sm lg:max-w-lg text-left absolute left-10 top-16 lg:left-32 lg:top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
+                                    <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
                                         class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
-                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
                                         adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
                                         perspiciatis optio.</p>
                                     <button
-                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
-                                        Now</button>
+                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">
+                                        Shop Now</button>
                                 </div>
                                 <div class="flex justify-center mx-auto">
                                     <video class="aligns-center w-full h-auto" autoPlay={true} muted loop>
@@ -43,11 +43,11 @@ const Index = () => {
                             </div>
                         </SplideSlide>
                         <SplideSlide>
-                            <div class="navbar">
-                                <div class="lg:max-w-lg text-left absolute left-32 top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
-                                    <h1 class="text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
+                          <div class="navbar">
+                                <div class="invisible sm:visible sm:w-2/5 md:w-4/12 lg:w-3/5 sm:max-w-sm lg:max-w-lg text-left absolute left-10 top-16 lg:left-32 lg:top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
+                                    <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
                                         class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
-                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
                                         adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
                                         perspiciatis optio.</p>
                                     <button
@@ -71,7 +71,7 @@ const Index = () => {
                     <h1 className="font-bold text-center text-3xl text-blue-900">All Type Bracket <span className="text-yellow-500">with
                         Premium
                         Quality</span></h1>
-                    <p className="font-regular text-xl text-center mx-auto w-3/6">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    <p className="font-regular text-xl text-center mx-auto w-4/5 sm:w-3/6">Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit.
                         Aenean vel
                         efficitur augue. Etiam lorem mauris, viverra sed pharetra non</p>
@@ -79,7 +79,7 @@ const Index = () => {
             </section>
             {/* Card */}
             <section className="container mx-auto flex justify-center mt-24 mb-12">
-                <div className="grid grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     <div className="card w-72 h-72 text-center box-border shadow-lg rounded-lg relative">
                         <img src={card1} alt="" className="absolute card-icon" />
                         <h1 className="font-semibold text-blue-800 pt-16 pb-3 text-xl">Online Billing, Invoicing &amp; Contracts</h1>
@@ -102,7 +102,7 @@ const Index = () => {
             </section>
             {/* VideoPlayer */}
             <section className="container mx-auto mt-28">
-                <div className="flex">
+                <div className="grid lg:grid-cols-2 grid-cols-1">
                     <div className="relative w-full text-left ml-14">
                         <img src={ellipse} alt="" className="absolute part-vid-capt" />
                         <h1 className="font-bold text-3xl text-blue-900 w-3/5 z-10">
@@ -114,25 +114,25 @@ const Index = () => {
                             elit. Donec in vestibulum nibh. Morbi euismod quam
                             purus, et mattis enim blandit vitae. Nullam vel tellus liberopellentesque.</p>
                     </div>
-                    <div className="relative">
+                    <div className="relative ml-4 xl:ml-52 lg:mt-0 mt-20">
                         {/* video youtube */}
                         <img src={bluereact} alt="" className="absolute vid-backg" />
-                        <iframe width={560} height={315} src="https://www.youtube.com/embed/RIm6N46ymeA" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-                        <img src={yellowreact} alt="" className="absolute vid-backg-sec" />
+                        <iframe width={560} height={315} className="w-11/12 sm:h-80 h-64" src="https://www.youtube.com/embed/RIm6N46ymeA" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                        <img src={yellowreact} alt="" className="ml-80 absolute vid-backg-sec" />
                     </div>
                 </div>
             </section>
             {/* Owner Said */}
             <section className="container mx-auto mt-24 mb-12">
-                <div className="flex w-full text-left">
-                    <div className="w-1/2 py-24 ml-14">
+                <div className="w-full grid grid-cols-1 lg:grid-cols-2">
+                    <div className="w-5/6 py-24 ml-14 text-left">
                         <h1 className="text-blue-900 font-bold text-3xl w-3/5 leading-normal"><span className="text-yellow-500">Commitmen</span> to Provide Best Quality</h1>
                         <p className="font-regular text-lg mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in
                             vestibulum nibh. Morbi euismod quam
                             purus, et mattis enim blandit vitae. Nullam vel tellus libero. Curabitur non tortor quis ipsum
                             bibendum porta. Nulla auctor est vel nunc imperdiet, ut scelerisque mi pellentesque.</p>
                     </div>
-                    <div className="w-1/2 flex justify-end mr-10">
+                    <div className="w-5/6 flex justify-end mr-10">
                         <img src={owner} alt="" className="w-3/4 h-auto" />
                     </div>
                 </div>
@@ -147,14 +147,14 @@ const Index = () => {
                     </div>
                     {/* what they say */}
                     <div className="flex justify-end mr-16">
-                        <h1 className="text-4xl text-blue-800 font-bold">What They Say?</h1>
+                        <h1 className="text-3xl sm:text-4xl text-blue-800 font-bold">What They Say?</h1>
                     </div>
                     {/* box */}
                     <Splide>
                         <SplideSlide>
-                            <div className="flex justify-center p-16">
-                                <div className="box-border w-full text-left h-64 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
+                            <div className="flex justify-center lg:p-16 p-0 mt-8">
+                                <div className="box-border w-full text-left md:text-base text-sm lg:h-64 sm:h-72 h-96 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
+                                    <p className="-mt-8 lg:mt-0">orem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
                                         quam purus, et mattis enim blandit vitae. Nullam vel tellus libero. Curabitur non tortor quis
                                         ipsum bibendum porta. Nulla auctor est vel nunc imperdiet, ut scelerisque mi pellentesque.
                                         Praesent sed tincidunt turpis, a congue justo. Nulla facilisi. Nam aliquam cursus velit.
@@ -175,9 +175,9 @@ const Index = () => {
                             </div>
                         </SplideSlide>
                         <SplideSlide>
-                            <div className="flex justify-center p-16">
-                                <div className="box-border w-full text-left h-64 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
+                             <div className="flex justify-center lg:p-16 p-0 mt-8">
+                                <div className="box-border w-full text-left md:text-base text-sm lg:h-64 sm:h-72 h-96 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
+                                    <p className="-mt-8 lg:mt-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
                                         quam purus, et mattis enim blandit vitae. Nullam vel tellus libero. Curabitur non tortor quis
                                         ipsum bibendum porta. Nulla auctor est vel nunc imperdiet, ut scelerisque mi pellentesque.
                                         Praesent sed tincidunt turpis, a congue justo. Nulla facilisi. Nam aliquam cursus velit.
@@ -213,14 +213,14 @@ const Index = () => {
             </section>
             {/* Contact */}
             <section className="container mx-auto mt-10">
-                <div className="flex justify-start mr-24">
-                    <div className="text-center w-5/12">
+                <div className="grid grid-cols-1 lg:flex lg:justify-start lg:mr-24 mr-0">
+                    <div className="text-center w-full lg:w-6/12">
                         <h1 className=" text-2xl font-bold">PT. Global Coco Perkasa</h1>
-                        <p className="mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus eget nulla eu
+                        <p className="mt-6 m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus eget nulla eu
                             elementum. Curabitur
                             lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
                             dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
-                        <div class="grid grid-cols-3 gap-4 mt-10">
+                        <div class="grid grid-cols-3 text-xs lg:text-base gap-3 mt-10">
                             <a href="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
                                 Whatsapp</a>
                             <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
@@ -233,8 +233,8 @@ const Index = () => {
                                 Tiktok </button>
                         </div>
                     </div>
-                    <div className="flex justify-end text-left w-7/12 pt-8">
-                        <table className="border-0">
+                     <div className="flex lg:justify-end justify-center w-full lg:w-7/12 pt-8">
+                        <table className="border-0 text-left text-xs sm:text-base">
                             <tbody><tr>
                                 <td className="px-4">Main Office</td>
                                 <td className="px-4">: Pasuruan - Indonesia</td>
