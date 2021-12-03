@@ -202,7 +202,7 @@ const Index = () => {
                         <h1 className=" text-2xl font-bold">PT. JAVA AGRO GLOBALINDO</h1>
                         <p className="mt-6 m-2">We also continue to update the information about the company through social media, for the latest information you can follow our social media.  </p>
                         <div class="grid grid-cols-3 text-xs lg:text-base gap-3 mt-10">
-                            <a href="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
+                            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
                                 Whatsapp</a>
                             <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
                                 Instagram</a>
