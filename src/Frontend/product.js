@@ -25,10 +25,8 @@ const Product = () => {
                             <div class="navbar">
                                 <div class="invisible sm:visible sm:w-2/5 md:w-4/12 lg:w-3/5 sm:max-w-sm lg:max-w-lg text-left absolute left-10 top-16 lg:left-32 lg:top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
                                     <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
-                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
-                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
-                                        perspiciatis optio.</p>
+                                        class="text-yellow-500">Selamat Datang!</span><br /> Java Agro Globalindo</h1>
+                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik </p>
                                     <button
                                         class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">
                                         Shop Now</button>
@@ -41,13 +39,11 @@ const Product = () => {
                             </div>
                         </SplideSlide>
                         <SplideSlide>
-                           <div class="navbar">
+                            <div class="navbar">
                                 <div class="invisible sm:visible sm:w-2/5 md:w-4/12 lg:w-3/5 sm:max-w-sm lg:max-w-lg text-left absolute left-10 top-16 lg:left-32 lg:top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
                                     <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
-                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
-                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
-                                        perspiciatis optio.</p>
+                                        class="text-yellow-500">Selamat Datang!</span> <br />Java Agro Globalindo</h1>
+                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik </p>
                                     <button
                                         class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">
                                         Shop Now</button>
@@ -250,14 +246,11 @@ const Product = () => {
                 </div>
             </section>
             {/* Contact */}
-             <section className="container mx-auto mt-10">
+            <section className="container mx-auto mt-10">
                 <div className="grid grid-cols-1 lg:flex lg:justify-start lg:mr-24 mr-0">
                     <div className="text-center w-full lg:w-6/12">
-                        <h1 className=" text-2xl font-bold">PT. Global Coco Perkasa</h1>
-                        <p className="mt-6 m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus eget nulla eu
-                            elementum. Curabitur
-                            lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
-                            dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
+                        <h1 className=" text-2xl font-bold">PT. JAVA AGRO GLOBALINDO</h1>
+                        <p className="mt-6 m-2">We also continue to update the information about the company through social media, for the latest information you can follow our social media.  </p>
                         <div class="grid grid-cols-3 text-xs lg:text-base gap-3 mt-10">
                             <a href="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
                                 Whatsapp</a>

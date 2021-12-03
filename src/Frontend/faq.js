@@ -3,7 +3,7 @@ import img from './img/faq.png'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 
-const Faq = () => {    
+const Faq = () => {
 
     return (
         <div className="pt-32 w-screen overflow-x-hidden">
@@ -16,13 +16,11 @@ const Faq = () => {
                         autoplay: true,
                     }}>
                         <SplideSlide>
-                           <div class="navbar">
+                            <div class="navbar">
                                 <div class="w-4/5 sm:max-w-lg text-left absolute left-11 md:left-32 md:top-24 sm:top-20 top-2 bg-gray-50 bg-opacity-90 shadow-lg md:p-5 p-2 rounded-lg">
-                                    <h1 class="text-base sm:text-xl xl:text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
-                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
-                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
-                                        perspiciatis optio.</p>
+                                    <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
+                                        class="text-yellow-500">Selamat Datang!</span><br /> Java Agro Globalindo</h1>
+                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik.</p>
                                     <button
                                         class="w-full px-8 sm:py-4 py-2 sm:mt-6 mt-2 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
                                         Now</button>
@@ -37,11 +35,9 @@ const Faq = () => {
                         <SplideSlide>
                             <div class="navbar">
                                 <div class="w-4/5 sm:max-w-lg text-left absolute left-11 md:left-32 md:top-24 sm:top-20 top-2 bg-gray-50 bg-opacity-90 shadow-lg md:p-5 p-2 rounded-lg">
-                                    <h1 class="text-base sm:text-xl xl:text-4xl w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl"><span
-                                        class="text-yellow-500">Lorem</span> Ipsum Dolor sit Amet</h1>
-                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Porro beatae error laborum ab amet sunt recusandae? Reiciendis natus
-                                        perspiciatis optio.</p>
+                                    <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
+                                        class="text-yellow-500">Selamat Datang!</span><br /> Java Agro Globalindo</h1>
+                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik.</p>
                                     <button
                                         class="w-full px-8 sm:py-4 py-2 sm:mt-6 mt-2 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
                                         Now</button>
@@ -58,7 +54,7 @@ const Faq = () => {
             </div>
 
             {/* Accordion */}
-           <section className="container mx-auto">
+            <section className="container mx-auto">
                 <div className="flex justify-center">
                     <h1 className="text-xl text-gray-900 font-bold">We've rounded up some of the most frequently asked questions
                     </h1>
@@ -136,14 +132,11 @@ const Faq = () => {
                 </div>
             </section>
             {/* Contact */}
-              <section className="container mx-auto mt-10">
+            <section className="container mx-auto mt-10">
                 <div className="grid grid-cols-1 lg:flex lg:justify-start lg:mr-24 mr-0">
                     <div className="text-center w-full lg:w-6/12">
-                        <h1 className=" text-2xl font-bold">PT. Global Coco Perkasa</h1>
-                        <p className="mt-6 m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus eget nulla eu
-                            elementum. Curabitur
-                            lobortis eros egestas pharetra maximus. Donec bibendum neque massa, at consectetur leo volutpat
-                            dignissim. In quam quam, blandit sit amet porta eget, convallis iaculis nulla. </p>
+                        <h1 className=" text-2xl font-bold">PT. JAVA AGRO GLOBALINDO</h1>
+                        <p className="mt-6 m-2">We also continue to update the information about the company through social media, for the latest information you can follow our social media.  </p>
                         <div class="grid grid-cols-3 text-xs lg:text-base gap-3 mt-10">
                             <a href="https://web.whatsapp.com/send?phone=6285736656434&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
                                 Whatsapp</a>
@@ -157,7 +150,7 @@ const Faq = () => {
                                 Tiktok </button>
                         </div>
                     </div>
-                   <div className="flex lg:justify-end justify-center w-full lg:w-7/12 pt-8">
+                    <div className="flex lg:justify-end justify-center w-full lg:w-7/12 pt-8">
                         <table className="border-0 text-left text-xs sm:text-base">
                             <tbody><tr>
                                 <td className="px-4">Main Office</td>
