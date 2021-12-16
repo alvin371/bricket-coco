@@ -6,8 +6,8 @@ import sucofindo from './img/sucofindo.png'
 import beacukai from './img/beacukai.png'
 import Founder from './img/user-icon.png'
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/splide.min.css';
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/splide/dist/css/splide.min.css'
 
 const About = () => {
     return (
@@ -60,10 +60,10 @@ const About = () => {
             {/* Company Profile */}
             <section className="container mx-auto">
                 <div className="grid grid-cols-1 sm:flex">
-                    <div className=" sm:w-1/2">
+                    <div className=" sm:w-1/2 mr-5 sm:mr-0">
                         <img src={company} alt="" className="m-5 sm:w-4/5 h-4/5 shadow-lg" />
                     </div>
-                    <div className=" sm:w-1/2">
+                    <div className=" sm:w-1/2 mx-3">
                         <p className="text-left font-normal text-base mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Proin venenatis sed magna at pharetra. Nulla
                             hendrerit, libero sed rhoncus hendrerit, felis mi volutpat tellus, ut efficitur mi est id lectus.
@@ -148,7 +148,7 @@ const About = () => {
                                     <input className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="email" />
                                 </div>
                             </div>
-                            <div className="w-full mt-4">
+                            <div className="w-full mt-4 mx-2 sm:mx-0">
                                 <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Message</label>
                                 <textarea className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" defaultValue={""} />
                             </div>
@@ -164,23 +164,24 @@ const About = () => {
             {/* Contact */}
             <section className="container mx-auto mt-10">
                 <div className="grid grid-cols-1 lg:flex lg:justify-start lg:mr-24 mr-0">
-                    <div className="text-center w-full lg:w-6/12 lg:mx-0 xl:mx-8 xl:w-5/12">
+                    <div className="text-center w-full lg:w-7/12 lg:mx-0 xl:mx-8 ">
                         <h1 className=" text-2xl font-bold">PT. JAVA AGRO GLOBALINDO</h1>
                         <p className="mt-6 m-2">We also continue to update the information about the company through social media, for the latest information you can follow our social media.  </p>
-                        <div class="grid grid-cols-3 text-xs lg:text-base gap-3 mt-10">
-                            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
+                        <div class="grid grid-cols-3 text-xs sm:text-base gap-2 mt-10 mx-3">
+                            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-4 sm:px-6"><i className="fab fa-whatsapp text-white mr-1 sm:mr-3" />
                                 Whatsapp</a>
-                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
+                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-instagram text-white mr-1 sm:mr-3" />
                                 Instagram</a>
-                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
+                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-facebook mr-1 sm:mr-3" />
                                 Facebook </a>
-                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-9"><i className="fab fa-youtube mr-3" />
+                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-4 sm:px-7"><i className=" fab fa-youtube mr-1 sm:mr-3" />
                                 Youtube </a>
-                            <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-9"><i className="fab fa-tiktok mr-3" />
-                                Tiktok </button>
+                            <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-6 sm:px-9"><i className="flex justify-center fab fa-tiktok mr-1 sm:mr-3" />
+                                Tiktok
+                            </button>
                         </div>
                     </div>
-                    <div className="flex lg:justify-end justify-center w-full lg:w-7/12 pt-8">
+                    <div className="flex lg:justify-center justify-center w-full lg:w-5/12 pt-8">
                         <table className="border-0 text-left text-xs sm:text-base">
                             <tbody><tr>
                                 <td className="px-4">Main Office</td>
@@ -203,7 +204,7 @@ const About = () => {
                 </div>
             </section>
         </div>
-    );
+    )
 }
 
-export default About;
+export default About

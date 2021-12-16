@@ -1,7 +1,18 @@
-import Sidebar from "./../components/Sidebar.js";
+import Sidebar from "./../components/Sidebar.js"
+import ModalsEdit from "../components/highlightModalsEdit.js"
+import ModalsAdd from "../components/highlightModalsAdd.js"
+import ModalsDelete from "../components/highlightModalsDelete.js"
+import { useState } from 'react'
+
 const ProductHighlights = () => {
+    const [modalEdit, setModalEdit] = useState( false )
+    const [modalAdd, setModalAdd] = useState( false )
+    const [modalDelete, setModalDelete] = useState( false )
     return (
         <div>
+            {modalEdit && <ModalsEdit closeModal={setModalEdit} />}
+            {modalAdd && <ModalsAdd closeModal={setModalAdd} />}
+            {modalDelete && <ModalsDelete closeModal={setModalDelete} />}
             <Sidebar />
             <div className="relative md:ml-64 bg-blueGray-100">
                 {/* Navbar */}
@@ -44,6 +55,7 @@ const ProductHighlights = () => {
                                                 className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1"
                                                 type="button"
                                                 style={{ transition: "all .15s ease" }}
+                                                onClick={() => setModalAdd( true )}
                                             ><i className="fas fa-plus mr-3"></i>
                                                 Add Product Highlights
                                             </button>
@@ -87,8 +99,8 @@ const ProductHighlights = () => {
                                                     img/product_1.jpg
                                                 </td>
                                                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 flex justify-between">
-                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400">Edit</button>
-                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400">Delete</button>
+                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400" onClick={() => setModalEdit( true )}>Edit</button>
+                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400" onClick={() => setModalDelete( true )}>Delete</button>
                                                 </td>
                                             </tr>
 
@@ -119,7 +131,7 @@ const ProductHighlights = () => {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default ProductHighlights;
+export default ProductHighlights

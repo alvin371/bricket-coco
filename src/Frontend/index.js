@@ -9,8 +9,8 @@ import ellipse from './img/part/ellipse.png'
 import video1 from './img/video1.mp4'
 import video2 from './img/video2.mp4'
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/splide.min.css';
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/splide/dist/css/splide.min.css'
 
 const Index = () => {
     return (
@@ -136,7 +136,7 @@ const Index = () => {
                     {/* box */}
                     <Splide>
                         <SplideSlide>
-                            <div className="flex justify-center lg:p-16 p-0 mt-8">
+                            <div className="flex justify-center lg:p-16 p-0 mt-8 ">
                                 <div className="box-border w-full text-left md:text-base text-sm lg:h-64 sm:h-72 h-96 border-2 border-blue-800 rounded-lg shadow-lg p-10 border-opacity-5">
                                     <p className="-mt-8 lg:mt-0">orem ipsum dolor sit amet, consectetur adipiscing elit. Donec in vestibulum nibh. Morbi euismod
                                         quam purus, et mattis enim blandit vitae. Nullam vel tellus libero. Curabitur non tortor quis
@@ -198,23 +198,24 @@ const Index = () => {
             {/* Contact */}
             <section className="container mx-auto mt-10">
                 <div className="grid grid-cols-1 lg:flex lg:justify-start lg:mr-24 mr-0">
-                    <div className="text-center w-full lg:w-6/12">
+                    <div className="text-center w-full lg:w-7/12 lg:mx-0 xl:mx-8 ">
                         <h1 className=" text-2xl font-bold">PT. JAVA AGRO GLOBALINDO</h1>
                         <p className="mt-6 m-2">We also continue to update the information about the company through social media, for the latest information you can follow our social media.  </p>
-                        <div class="grid grid-cols-3 text-xs lg:text-base gap-3 mt-10">
-                            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
+                        <div class="grid grid-cols-3 text-xs sm:text-base gap-2 mt-10 mx-3">
+                            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-4 sm:px-6"><i className="fab fa-whatsapp text-white mr-1 sm:mr-3" />
                                 Whatsapp</a>
-                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
+                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-instagram text-white mr-1 sm:mr-3" />
                                 Instagram</a>
-                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
+                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-facebook mr-1 sm:mr-3" />
                                 Facebook </a>
-                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-9"><i className="fab fa-youtube mr-3" />
+                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-4 sm:px-7"><i className=" fab fa-youtube mr-1 sm:mr-3" />
                                 Youtube </a>
-                            <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-9"><i className="fab fa-tiktok mr-3" />
-                                Tiktok </button>
+                            <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-6 sm:px-9"><i className="flex justify-center fab fa-tiktok mr-1 sm:mr-3" />
+                                Tiktok
+                            </button>
                         </div>
                     </div>
-                    <div className="flex lg:justify-end justify-center w-full lg:w-7/12 pt-8">
+                    <div className="flex lg:justify-center justify-center w-full lg:w-5/12 pt-8">
                         <table className="border-0 text-left text-xs sm:text-base">
                             <tbody><tr>
                                 <td className="px-4">Main Office</td>
@@ -237,7 +238,7 @@ const Index = () => {
                 </div>
             </section>
         </div >
-    );
+    )
 }
 
-export default Index;
+export default Index

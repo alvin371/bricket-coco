@@ -1,8 +1,21 @@
-import Sidebar from "./../components/Sidebar.js";
+import Sidebar from "./../components/Sidebar.js"
+import ModalsAdd from "../components/listModalsAdd.js"
+import ModalsEdit from "../components/listModalsEdit.js"
+import ModalsDelete from "../components/listModalsDelete.js"
+import { useState } from 'react'
+
+
+
 const Product = () => {
+    const [modalEdit, setModalEdit] = useState( false )
+    const [modalAdd, setModalAdd] = useState( false )
+    const [modalDelete, setModalDelete] = useState( false )
     return (
         <div>
             <Sidebar />
+            {modalEdit && <ModalsEdit closeModal={setModalEdit} />}
+            {modalAdd && <ModalsAdd closeModal={setModalAdd} />}
+            {modalDelete && <ModalsDelete closeModal={setModalDelete} />}
             <div className="relative md:ml-64 bg-blueGray-100">
                 {/* Navbar */}
                 <nav className="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4">
@@ -44,6 +57,7 @@ const Product = () => {
                                                 className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1"
                                                 type="button"
                                                 style={{ transition: "all .15s ease" }}
+                                                onClick={() => setModalAdd( true )}
                                             ><i className="fas fa-plus mr-3"></i>
                                                 Add Product List
                                             </button>
@@ -93,8 +107,8 @@ const Product = () => {
                                                     img/product_1.jpg
                                                 </td>
                                                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 flex justify-between">
-                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400">Edit</button>
-                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400">Delete</button>
+                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400" onClick={() => setModalEdit( true )}>Edit</button>
+                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400" onClick={() => setModalDelete( true )}>Delete</button>
                                                 </td>
                                             </tr>
 
@@ -125,7 +139,7 @@ const Product = () => {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Product;
+export default Product
