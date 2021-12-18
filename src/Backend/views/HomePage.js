@@ -1,7 +1,38 @@
-import Sidebar from "./../components/Sidebar.js";
+import Sidebar from "./../components/Sidebar.js"
+import ModalsYoutubeEdit from "../components/youtubeModalsEdit.js"
+import ModalsYoutubeDelete from "../components/youtubeModalsDelete.js"
+
+import ModalsOwnerEdit from "../components/ownerModalsEdit.js"
+import ModalsOwnerDelete from "../components/ownerModalsDelete.js"
+
+import ModalsTestiAdd from "../components/testiModalsAdd.js"
+import ModalsTestiEdit from "../components/testiModalsEdit.js"
+import ModalsTestiDelete from "../components/testiModalsDelete.js"
+import { useState } from 'react'
+
 const HomePage = () => {
+    // youtube
+    const [modalsYoutubeEdit, setModalYoutubeEdit] = useState( false )
+    const [modalsYoutubeDelete, setModalYoutubeDelete] = useState( false )
+    // owner quot
+    const [modalsOwnerEdit, setModalOwnerEdit] = useState( false )
+    const [modalsOwnerDelete, setModalOwnerDelete] = useState( false )
+    // testimonial
+    const [modalTestiAdd, setModalTestiAdd] = useState( false )
+    const [modalTestiEdit, setModalTestiEdit] = useState( false )
+    const [modalTestiDelete, setModalTestiDelete] = useState( false )
     return (
         <div>
+            {/* Youtube */}
+            {modalsYoutubeEdit && <ModalsYoutubeEdit closeModal={setModalYoutubeEdit} />}
+            {modalsYoutubeDelete && <ModalsYoutubeDelete closeModal={setModalYoutubeDelete} />}
+            {/* Owner */}
+            {modalsOwnerEdit && <ModalsOwnerEdit closeModal={setModalOwnerEdit} />}
+            {modalsOwnerDelete && <ModalsOwnerDelete closeModal={setModalOwnerDelete} />}
+            {/* Testimonial */}
+            {modalTestiAdd && <ModalsTestiAdd closeModal={setModalTestiAdd} />}
+            {modalTestiEdit && <ModalsTestiEdit closeModal={setModalTestiEdit} />}
+            {modalTestiDelete && <ModalsTestiDelete closeModal={setModalTestiDelete} />}
             <Sidebar />
             <div className="relative md:ml-64 bg-blueGray-100">
                 {/* Navbar */}
@@ -72,8 +103,8 @@ const HomePage = () => {
                                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam asperiores sapiente voluptatibus non, totam aliquam eligendi culpa reprehenderit eos voluptatum et suscipit ducimus sunt nobis provident, eius expedita voluptates nesciunt.
                                                 </td>
                                                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4 flex justify-between">
-                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400">Edit</button>
-                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400">Delete</button>
+                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400" onClick={() => setModalYoutubeEdit( true )}>Edit</button>
+                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400" onClick={() => setModalYoutubeDelete( true )}>Delete</button>
                                                 </td>
                                             </tr>
 
@@ -127,8 +158,8 @@ const HomePage = () => {
                                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam asperiores sapiente voluptatibus non, totam aliquam eligendi culpa reprehenderit eos voluptatum et suscipit ducimus sunt nobis provident, eius expedita voluptates nesciunt.
                                                 </td>
                                                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4 flex justify-between">
-                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400">Edit</button>
-                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400">Delete</button>
+                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400" onClick={() => setModalOwnerEdit( true )}>Edit</button>
+                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400" onClick={() => setModalOwnerDelete( true )}>Delete</button>
                                                 </td>
                                             </tr>
 
@@ -154,6 +185,7 @@ const HomePage = () => {
                                                 className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1"
                                                 type="button"
                                                 style={{ transition: "all .15s ease" }}
+                                                onClick={() => setModalTestiAdd( true )}
                                             ><i className="fas fa-plus mr-3"></i>
                                                 Add Testimonial
                                             </button>
@@ -203,8 +235,8 @@ const HomePage = () => {
                                                     Serawak, Malaysia
                                                 </td>
                                                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4 flex justify-between">
-                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400">Edit</button>
-                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400">Delete</button>
+                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400" onClick={() => setModalTestiEdit( true )}>Edit</button>
+                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400" onClick={() => setModalTestiDelete( true )}>Delete</button>
                                                 </td>
                                             </tr>
 
@@ -235,7 +267,7 @@ const HomePage = () => {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default HomePage;
+export default HomePage

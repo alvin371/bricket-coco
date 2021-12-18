@@ -1,26 +1,28 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const Header = () => {
-    const [navbar, setNavbar] = useState(false)
-    
+    const [navbar, setNavbar] = useState( false )
+
     const [isOpen, setIsOpen] = useState( false )
-    
+
     const changeBackground = () => {
-        if (window.scrollY >= 80) {
-            setNavbar(true)
-        } else {
-            setNavbar(false)
+        if ( window.scrollY >= 80 )
+        {
+            setNavbar( true )
+        } else
+        {
+            setNavbar( false )
         }
     }
-    window.addEventListener('scroll', changeBackground)
+    window.addEventListener( 'scroll', changeBackground )
     return (
         <div className="relative">
-            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="flex flex-row w-28 h-auto top-28 right-5 fixed bg-green-500 hover:bg-green-400 px-3 py-4 lg:w-44 rounded-tl-full rounded-bl-full rounded-br-full z-100">
+            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="flex flex-row w-40 h-auto top-24 sm:top-28 right-5 fixed bg-green-500 hover:bg-green-400 px-3 lg:py-4 py-2 lg:w-44 rounded-tl-full rounded-bl-full rounded-br-full z-100">
                 <p className="text-white font-bold text-sm lg:text-base"><i className="fab fa-whatsapp text-xl mx-2"></i>Reach Us Here!</p>
             </a>
             <header className="absolute z-100 bg-white dark:bg-gray-800 pb-9">
-                <nav className={navbar ? 'fixed w-screen bg-gray-900 shadow-lg' : 'fixed w-screen bg-white-700 shadow-lg'}>
+                <nav className={navbar ? 'fixed w-screen bg-gray-900 shadow-lg' : 'fixed w-screen bg-white lg:bg-white shadow-lg'}>
                     <div className="container px-6 py-3 mx-auto lg:flex lg:justify-between lg:items-center">
                         <div className="flex items-center justify-between">
                             <div>
@@ -29,7 +31,7 @@ const Header = () => {
                             </div>
                             <div className="flex lg:hidden">
                                 <button type="button"
-                                    onClick={() => setIsOpen(!isOpen)}
+                                    onClick={() => setIsOpen( !isOpen )}
                                     className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
                                     aria-label="toggle menu">
                                     <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
@@ -48,22 +50,8 @@ const Header = () => {
                             <div className="flex flex-col lg:flex-row xl:mx-24">
                                 <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
                                     to="/">Home</Link>
-                                <Link className={navbar ? 'flex flex-row my-1 text-sm font-medium navbar-text lg:mx-10 lg:my-0 inline-block relative dropdown' : 'my-1 text-sm font-medium navbar-first lg:mx-10 lg:my-0 inline-block relative dropdown'}
-                                    to="/product">
-                                    <div class="relative z-10 flex items-center ">
-                                        <span className="flex flex-row">Our Product </span>
-                                        <svg class="w-5 h-5 mx-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 15.713L18.01 9.70299L16.597 8.28799L12 12.888L7.40399 8.28799L5.98999 9.70199L12 15.713Z" fill="currentColor"></path>
-                                        </svg>
-                                    </div>
-                                    <span className="w-1/4">
-                                        <ul class="dropdown-menu absolute hidden text-gray-700 mt-4 ">
-                                            <li className=""><Link to="" className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-6 block whitespace-no-wrap">One</Link></li>
-                                            <li className=""><Link to="" className="bg-gray-200 hover:bg-gray-400 py-2 px-6 block whitespace-no-wrap">Two</Link></li>
-                                            <li className=""><Link to="" className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-6 block whitespace-no-wrap">Three is the magic number</Link></li>
-                                        </ul>
-                                    </span>
-                                </Link>
+                                <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
+                                    to="/product">Our Product</Link>
                                 <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
                                     to="/faq">FAQ</Link>
                                 <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
@@ -78,7 +66,7 @@ const Header = () => {
                 </nav>
             </header>
         </div >
-    );
+    )
 }
 
-export default Header;
+export default Header

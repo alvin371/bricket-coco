@@ -3,13 +3,50 @@ import video2 from './img/video2.mp4'
 import sun from './img/part/Sun.png'
 
 import Modals from './productModals'
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/splide.min.css';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/splide/dist/css/splide.min.css'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+// import Dropdown from './dropdown'
+// import Categories from './categories'
+
 
 const Product = () => {
-    const [modal, setModal] = useState(false)
+    const [data, setData] = useState( [] )
+
+    useEffect( () => {
+        axios.get( 'https://jsonplaceholder.typicode.com/posts' )
+            .then( res => {
+                setData( res.data )
+            } ).catch( err => console.log( err ) )
+    }, [] )
+
+    const card = data.map( ( data, index ) => {
+        return (
+            <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+                <button onClick={() => setModal( true )}>
+                    <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+                </button>
+                <div className="p-5">
+                    <p className="inline-flex cursor-pointer" onClick={() => setModal( true )}>
+                        <h5 className="text-gray-900 font-bold text-xl sm:text-2xl tracking-tight mb-2">{data.title}</h5>
+                    </p>
+                    <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
+                        2021 so far, in reverse chronological order.</p>
+                    <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                        <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                    </button>
+                    <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                        Read more
+                    </button>
+                </div>
+            </div>
+        )
+    } )
+
+    const [modal, setModal] = useState( false )
     return (
         <div className="pt-24 w-screen overflow-x-hidden">
             {modal && <Modals closeModal={setModal} />}
@@ -63,123 +100,17 @@ const Product = () => {
                 <h1 className="font-bold text-2xl text-yellow-400"><Link to="/" className="no-underline mr-5">Home</Link>/<span className="text-blue-900 ml-5">Our Product</span></h1>
                 <hr className="w-2/12" />
             </section>
+            {/* button */}
+            <div className="flex justify-center">
+                <button
+                    class="w-44 px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">
+                    lorem</button>
+            </div>
+
             {/* Product Quality */}
             <section className="container mx-auto mt-24 mb-12">
                 <div className="grid grid-flow-row grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 m-5">
-                    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <button onClick={() => setModal(true)}>
-                            <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </button>
-                        <div className="p-5">
-                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
-                                <h5 className="text-gray-900 font-bold text-xl sm:text-2xl tracking-tight mb-2">Noteworthy technology
-                                    acquisitions 2021</h5>
-                            </p>
-                            <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
-                                2021 so far, in reverse chronological order.</p>
-                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
-                            </button>
-                            <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                Read more
-                            </button>
-                        </div>
-                    </div>
-                    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <button onClick={() => setModal(true)}>
-                            <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </button>
-                        <div className="p-5">
-                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
-                                <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
-                                    acquisitions 2021</h5>
-                            </p>
-                            <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
-                                2021 so far, in reverse chronological order.</p>
-                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
-                            </button>
-                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                Read more
-                            </button>
-                        </div>
-                    </div>
-                    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <button onClick={() => setModal(true)}>
-                            <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </button>
-                        <div className="p-5">
-                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
-                                <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
-                                    acquisitions 2021</h5>
-                            </p>
-                            <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
-                                2021 so far, in reverse chronological order.</p>
-                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
-                            </button>
-                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                Read more
-                            </button>
-                        </div>
-                    </div>
-                    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <button onClick={() => setModal(true)}>
-                            <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </button>
-                        <div className="p-5">
-                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
-                                <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
-                                    acquisitions 2021</h5>
-                            </p>
-                            <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
-                                2021 so far, in reverse chronological order.</p>
-                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
-                            </button>
-                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                Read more
-                            </button>
-                        </div>
-                    </div>
-                    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <button onClick={() => setModal(true)}>
-                            <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </button>
-                        <div className="p-5">
-                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
-                                <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
-                                    acquisitions 2021</h5>
-                            </p>
-                            <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
-                                2021 so far, in reverse chronological order.</p>
-                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
-                            </button>
-                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                Read more
-                            </button>
-                        </div>
-                    </div>
-                    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                        <button onClick={() => setModal(true)}>
-                            <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                        </button>
-                        <div className="p-5">
-                            <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
-                                <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology
-                                    acquisitions 2021</h5>
-                            </p>
-                            <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
-                                2021 so far, in reverse chronological order.</p>
-                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
-                            </button>
-                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                                Read more
-                            </button>
-                        </div>
-                    </div>
+                    {card}
                 </div>
             </section>
             {/* Title Quality */}
@@ -192,7 +123,7 @@ const Product = () => {
             </section>
             {/* Card Quality */}
             <section className="container mx-auto mt-12 mb-12">
-                <div className="grid grid-flow-row grid-cols-4 lg:grid-cols-6 gap-4 mx-3">
+                <div className="grid grid-flow-row grid-cols-2 md:grid-cols-6 gap-4 mx-3">
                     <div className="col-span-2 flex border-box border-2 rounded-lg shadow-md border-blue-600 border-opacity-10 p-5">
                         <div className="w-1/4">
                             <img src={sun} alt="" />
@@ -223,7 +154,7 @@ const Product = () => {
                                 Suspendisse et urna </p>
                         </div>
                     </div>
-                    <div className="lg:col-start-2 col-span-2 flex border-box border-2 rounded-lg shadow-md border-blue-600 border-opacity-10 p-5">
+                    <div className="md:col-start-2 col-span-2 flex border-box border-2 rounded-lg shadow-md border-blue-600 border-opacity-10 p-5">
                         <div className="w-1/4">
                             <img src={sun} alt="" />
                         </div>
@@ -233,7 +164,7 @@ const Product = () => {
                                 Suspendisse et urna </p>
                         </div>
                     </div>
-                    <div className="col-start-2 col-span-2 lg:col-span-2 flex border-box border-2 rounded-lg shadow-md border-blue-600 border-opacity-10 p-5">
+                    <div className=" col-span-2 md:col-span-2 flex border-box border-2 rounded-lg shadow-md border-blue-600 border-opacity-10 p-5">
                         <div className="w-1/4">
                             <img src={sun} alt="" />
                         </div>
@@ -248,23 +179,24 @@ const Product = () => {
             {/* Contact */}
             <section className="container mx-auto mt-10">
                 <div className="grid grid-cols-1 lg:flex lg:justify-start lg:mr-24 mr-0">
-                    <div className="text-center w-full lg:w-6/12">
+                    <div className="text-center w-full lg:w-7/12 lg:mx-0 xl:mx-8 ">
                         <h1 className=" text-2xl font-bold">PT. JAVA AGRO GLOBALINDO</h1>
                         <p className="mt-6 m-2">We also continue to update the information about the company through social media, for the latest information you can follow our social media.  </p>
-                        <div class="grid grid-cols-3 text-xs lg:text-base gap-3 mt-10">
-                            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-9"><i className="fab fa-whatsapp text-white mr-3" />
+                        <div class="grid grid-cols-3 text-xs sm:text-base gap-2 mt-10 mx-3">
+                            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-4 sm:px-6"><i className="fab fa-whatsapp text-white mr-1 sm:mr-3" />
                                 Whatsapp</a>
-                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-9"><i className="fab fa-instagram text-white mr-3" />
+                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-instagram text-white mr-1 sm:mr-3" />
                                 Instagram</a>
-                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-9"><i className="fab fa-facebook mr-3" />
+                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-facebook mr-1 sm:mr-3" />
                                 Facebook </a>
-                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-9"><i className="fab fa-youtube mr-3" />
+                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-4 sm:px-7"><i className=" fab fa-youtube mr-1 sm:mr-3" />
                                 Youtube </a>
-                            <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-9"><i className="fab fa-tiktok mr-3" />
-                                Tiktok </button>
+                            <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-6 sm:px-9"><i className="flex justify-center fab fa-tiktok mr-1 sm:mr-3" />
+                                Tiktok
+                            </button>
                         </div>
                     </div>
-                    <div className="flex lg:justify-end justify-center w-full lg:w-7/12 pt-8">
+                    <div className="flex lg:justify-center justify-center w-full lg:w-5/12 pt-8">
                         <table className="border-0 text-left text-xs sm:text-base">
                             <tbody><tr>
                                 <td className="px-4">Main Office</td>
@@ -287,7 +219,7 @@ const Product = () => {
                 </div>
             </section>
         </div>
-    );
+    )
 }
 
-export default Product;
+export default Product
