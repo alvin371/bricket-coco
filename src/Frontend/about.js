@@ -5,6 +5,8 @@ import kemenkunham from './img/Kemenhukham.png'
 import sucofindo from './img/sucofindo.png'
 import beacukai from './img/beacukai.png'
 import Founder from './img/user-icon.png'
+import Elsa from './img/elsa.jpg'
+import Revo from './img/revo.jpg'
 
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
@@ -97,12 +99,12 @@ const About = () => {
                         <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Yasa Wahyudi</p></button>
                     </div>
                     <div class="flex flex-col justified-center my-5">
-                        <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
+                        <img src={Revo} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
                         <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Product Development And Logistics</h1>
                         <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Revoliansyah Nur Rasyid</p></button>
                     </div>
                     <div class="flex flex-col justified-center my-5">
-                        <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
+                        <img src={Elsa} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
                         <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Bussiness And Legal</h1>
                         <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Elsa Ansori</p></button>
                     </div>
