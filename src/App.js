@@ -12,7 +12,15 @@ import ProductHighlights from "./Backend/views/ProductHighlights.js";
 import AskedQuestion from "./Backend/views/Faq.js";
 import QuestionList from "./Backend/views/QuestionList.js";
 import HomePage from "./Backend/views/HomePage.js";
+import axios from 'axios';
 
+
+axios.defaults.withCredentials = true
+axios.interceptors.request.use(function (config) {
+  const token = localStorage.getItem('auth_token')
+  config.headers.Authorization = token ? `Bearer ${token}` : '';
+  return config
+})
 
 function App() {
   return (

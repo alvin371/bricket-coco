@@ -2,14 +2,34 @@ import Sidebar from "./../components/Sidebar.js"
 import ModalsAdd from "../components/listModalsAdd.js"
 import ModalsEdit from "../components/listModalsEdit.js"
 import ModalsDelete from "../components/listModalsDelete.js"
-import { useState } from 'react'
-
+import { useState, useEffect } from 'react'
+import axios from "axios"
 
 
 const Product = () => {
-    const [modalEdit, setModalEdit] = useState( false )
-    const [modalAdd, setModalAdd] = useState( false )
-    const [modalDelete, setModalDelete] = useState( false )
+    const [modalEdit, setModalEdit] = useState(false)
+    const [modalAdd, setModalAdd] = useState(false)
+    const [modalDelete, setModalDelete] = useState(false)
+    const [data, setData] = useState([]);
+    const fetch = async () => {
+        try {
+            const res = await axios.get("http://localhost:8000/sanctum/csrf-cookie").then((response) => {
+                response.headers.add('Access-Control-Allow-Origin', '*')
+                axios.get('ttp://localhost:8000/api/product').then((response) => {
+                    response.headers.add('Access-Control-Allow-Origin', '*')
+                })
+            })
+            console.log(res.data)
+            setData(res.data.articles)
+            // setLoading(true)
+        } catch (err) {
+            console.log(err.message)
+        }
+    }
+    console.log(data)
+    useEffect(() => {
+        fetch()
+    }, []);
     return (
         <div>
             <Sidebar />
@@ -57,7 +77,7 @@ const Product = () => {
                                                 className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1"
                                                 type="button"
                                                 style={{ transition: "all .15s ease" }}
-                                                onClick={() => setModalAdd( true )}
+                                                onClick={() => setModalAdd(true)}
                                             ><i className="fas fa-plus mr-3"></i>
                                                 Add Product List
                                             </button>
@@ -90,28 +110,30 @@ const Product = () => {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                                                    1
-                                                </th>
-                                                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                    Bricket Coco
-                                                </td>
-                                                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 overflow-auto">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam asperiores sapiente voluptatibus non, totam aliquam eligendi culpa reprehenderit eos voluptatum et suscipit ducimus sunt nobis provident, eius expedita voluptates nesciunt.
-                                                </td>
-                                                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                    kategori1
-                                                </td>
-                                                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                    img/product_1.jpg
-                                                </td>
-                                                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 flex justify-between">
-                                                    <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400" onClick={() => setModalEdit( true )}>Edit</button>
-                                                    <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400" onClick={() => setModalDelete( true )}>Delete</button>
-                                                </td>
-                                            </tr>
+                                            {data && (data.map(item => (
 
+                                                <tr key={item.id}>
+                                                    <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                                                        {item.id}
+                                                    </th>
+                                                    <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                        Bricket Coco
+                                                    </td>
+                                                    <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 overflow-auto">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam asperiores sapiente voluptatibus non, totam aliquam eligendi culpa reprehenderit eos voluptatum et suscipit ducimus sunt nobis provident, eius expedita voluptates nesciunt.
+                                                    </td>
+                                                    <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                        kategori1
+                                                    </td>
+                                                    <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                        img/product_1.jpg
+                                                    </td>
+                                                    <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 flex justify-between">
+                                                        <button className="text-white bg-green-500 px-6 py-2 rounded-full hover:bg-green-400" onClick={() => setModalEdit(true)}>Edit</button>
+                                                        <button className="text-white bg-red-500 px-6 py-2 rounded-full hover:bg-red-400" onClick={() => setModalDelete(true)}>Delete</button>
+                                                    </td>
+                                                </tr>
+                                            )))}
                                         </tbody>
                                     </table>
                                 </div>

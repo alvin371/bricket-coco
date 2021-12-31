@@ -1,11 +1,31 @@
+import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import swal from "sweetalert";
 
 import NotificationDropdown from "./NotificationDropdown.js";
 import UserDropdown from "./UserDropdown.js";
 
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
+  const history = useHistory();
+  const logoutHandler = (e) => {
+    e.preventDefault()
+    axios.post('http://localhost:8000/api/auth/logout')
+      .then(res => {
+        if (res.data.status === 'success') {
+          localStorage.removeItem('auth_token')
+          localStorage.removeItem('auth_name', res.data.username)
+          swal({
+            icon: 'success',
+            title: 'Logout Successfully!'
+          })
+          history.push('/')
+        }
+      }).catch((e) => {
+        console.log(e);
+      })
+  }
   return (
     <>
       <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
@@ -18,7 +38,6 @@ export default function Sidebar() {
           >
             <i className="fas fa-bars"></i>
           </button>
-          {/* Brand */}
           <Link
             className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             to="/"
@@ -136,12 +155,12 @@ export default function Sidebar() {
               </li>
 
               <li className="inline-flex">
-                <Link
+                <button
                   className="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
-                  to="/"
+                  onClick={logoutHandler}
                 >
                   <i className="fas fa-sign-out-alt mr-2 text-blueGray-400 text-base"></i>Logout
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

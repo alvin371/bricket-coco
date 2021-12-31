@@ -2,23 +2,21 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 const Header = () => {
-    const [navbar, setNavbar] = useState( false )
+    const [navbar, setNavbar] = useState(false)
 
-    const [isOpen, setIsOpen] = useState( false )
+    const [isOpen, setIsOpen] = useState(false)
 
     const changeBackground = () => {
-        if ( window.scrollY >= 80 )
-        {
-            setNavbar( true )
-        } else
-        {
-            setNavbar( false )
+        if (window.scrollY >= 80) {
+            setNavbar(true)
+        } else {
+            setNavbar(false)
         }
     }
-    window.addEventListener( 'scroll', changeBackground )
+    window.addEventListener('scroll', changeBackground)
     return (
         <div className="relative">
-            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="flex flex-row w-40 h-auto top-24 sm:top-28 right-5 fixed bg-green-500 hover:bg-green-400 px-3 lg:py-4 py-2 lg:w-44 rounded-tl-full rounded-bl-full rounded-br-full z-100">
+            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Java Agro Globalindo, I'm interested in your product .." className="flex flex-row w-40 h-auto top-24 sm:top-28 right-5 fixed bg-green-500 hover:bg-green-400 px-3 lg:py-4 py-2 lg:w-44 rounded-tl-full rounded-bl-full rounded-br-full z-100">
                 <p className="text-white font-bold text-sm lg:text-base"><i className="fab fa-whatsapp text-xl mx-2"></i>Reach Us Here!</p>
             </a>
             <header className="absolute z-100 bg-white dark:bg-gray-800 pb-9">
@@ -31,7 +29,7 @@ const Header = () => {
                             </div>
                             <div className="flex lg:hidden">
                                 <button type="button"
-                                    onClick={() => setIsOpen( !isOpen )}
+                                    onClick={() => setIsOpen(!isOpen)}
                                     className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
                                     aria-label="toggle menu">
                                     <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">

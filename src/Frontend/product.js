@@ -1,5 +1,4 @@
-import video1 from './img/video1.mp4'
-import video2 from './img/video2.mp4'
+import slider1 from './img/slider1.png'
 import sun from './img/part/Sun.png'
 
 import Modals from './productModals'
@@ -14,39 +13,39 @@ import axios from 'axios'
 
 
 const Product = () => {
-    const [data, setData] = useState( [] )
+    const [data, setData] = useState([])
 
-    useEffect( () => {
-        axios.get( 'https://jsonplaceholder.typicode.com/posts' )
-            .then( res => {
-                setData( res.data )
-            } ).catch( err => console.log( err ) )
-    }, [] )
+    useEffect(() => {
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+            .then(res => {
+                setData(res.data)
+            }).catch(err => console.log(err))
+    }, [])
 
-    const card = data.map( ( data, index ) => {
+    const card = data.map((data, index) => {
         return (
             <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                <button onClick={() => setModal( true )}>
+                <button onClick={() => setModal(true)}>
                     <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
                 </button>
                 <div className="p-5">
-                    <p className="inline-flex cursor-pointer" onClick={() => setModal( true )}>
+                    <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
                         <h5 className="text-gray-900 font-bold text-xl sm:text-2xl tracking-tight mb-2">{data.title}</h5>
                     </p>
                     <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
                         2021 so far, in reverse chronological order.</p>
-                    <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                    <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
                         <i class="fab fa-whatsapp mr-2"></i>  Call Us
                     </button>
-                    <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                    <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
                         Read more
                     </button>
                 </div>
             </div>
         )
-    } )
+    })
 
-    const [modal, setModal] = useState( false )
+    const [modal, setModal] = useState(false)
     return (
         <div className="pt-24 w-screen overflow-x-hidden">
             {modal && <Modals closeModal={setModal} />}
@@ -59,36 +58,23 @@ const Product = () => {
                         autoplay: true,
                     }}>
                         <SplideSlide>
-                            <div class="navbar">
-                                <div class="invisible sm:visible sm:w-2/5 md:w-4/12 lg:w-3/5 sm:max-w-sm lg:max-w-lg text-left absolute left-10 top-16 lg:left-32 lg:top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
-                                    <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
-                                        class="text-yellow-500">Selamat Datang!</span><br /> Java Agro Globalindo</h1>
-                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik </p>
-                                    <button
-                                        class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">
-                                        Shop Now</button>
-                                </div>
-                                <div class="flex justify-center mx-auto">
-                                    <video class="aligns-center w-full h-auto" autoPlay={true} muted loop>
-                                        <source src={video1} type="video/mp4" />
-                                    </video>
-                                </div>
+                            <div class="splide__progress">
+                                <div class="splide__progress__bar"></div>
                             </div>
-                        </SplideSlide>
-                        <SplideSlide>
                             <div class="navbar">
                                 <div class="invisible sm:visible sm:w-2/5 md:w-4/12 lg:w-3/5 sm:max-w-sm lg:max-w-lg text-left absolute left-10 top-16 lg:left-32 lg:top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
                                     <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
-                                        class="text-yellow-500">Selamat Datang!</span> <br />Java Agro Globalindo</h1>
-                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik </p>
+                                        class="text-yellow-500">Selamat Datang! </span>Java Agro Globalindo</h1>
+                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik .</p>
                                     <button
                                         class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">
                                         Shop Now</button>
                                 </div>
                                 <div class="flex justify-center mx-auto">
-                                    <video class="aligns-center w-full h-auto" autoPlay={true} muted loop>
-                                        <source src={video2} type="video/mp4" />
-                                    </video>
+                                    <img src={slider1} alt="" />
+                                    {/* <video class="aligns-center w-full h-auto" autoPlay={true} muted loop>
+                                        <source src={slider1} type="video/mp4" />
+                                    </video> */}
                                 </div>
                             </div>
                         </SplideSlide>
@@ -183,13 +169,13 @@ const Product = () => {
                         <h1 className=" text-2xl font-bold">PT. JAVA AGRO GLOBALINDO</h1>
                         <p className="mt-6 m-2">We also continue to update the information about the company through social media, for the latest information you can follow our social media.  </p>
                         <div class="grid grid-cols-3 text-xs sm:text-base gap-2 mt-10 mx-3">
-                            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Coco, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-4 sm:px-6"><i className="fab fa-whatsapp text-white mr-1 sm:mr-3" />
+                            <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Java Agro Global Indo, I'm interested in your product .." className="rounded-full bg-green-500 font-bold text-white py-2 px-4 sm:px-6"><i className="fab fa-whatsapp text-white mr-1 sm:mr-3" />
                                 Whatsapp</a>
-                            <a href="https://www.instagram.com/alvindstr/" className="rounded-full bg-pink-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-instagram text-white mr-1 sm:mr-3" />
+                            <a href=" " className="rounded-full bg-pink-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-instagram text-white mr-1 sm:mr-3" />
                                 Instagram</a>
-                            <a href="https://www.facebook.com/santos.dc.nugroho/" className="rounded-full bg-blue-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-facebook mr-1 sm:mr-3" />
+                            <a href=" " className="rounded-full bg-blue-500 font-bold text-white py-2 px-4 sm:px-7"><i className="fab fa-facebook mr-1 sm:mr-3" />
                                 Facebook </a>
-                            <a href="https://www.youtube.com/c/ANONIMM" className="rounded-full bg-red-500 font-bold text-white py-2 px-4 sm:px-7"><i className=" fab fa-youtube mr-1 sm:mr-3" />
+                            <a href=" " className="rounded-full bg-red-500 font-bold text-white py-2 px-4 sm:px-7"><i className=" fab fa-youtube mr-1 sm:mr-3" />
                                 Youtube </a>
                             <button href="" className="rounded-full bg-gray-700 font-bold text-white py-2 px-6 sm:px-9"><i className="flex justify-center fab fa-tiktok mr-1 sm:mr-3" />
                                 Tiktok
@@ -200,19 +186,19 @@ const Product = () => {
                         <table className="border-0 text-left text-xs sm:text-base">
                             <tbody><tr>
                                 <td className="px-4">Main Office</td>
-                                <td className="px-4">: Pasuruan - Indonesia</td>
+                                <td className="px-4">: Pasuruan - Jawa Timur</td>
                             </tr>
                                 <tr>
                                     <td className="px-4">Branch Office</td>
-                                    <td className="px-4">: Malang Indonesia</td>
+                                    <td className="px-4">: Pasuruan Indonesia</td>
                                 </tr>
                                 <tr>
                                     <td className="px-4">Telp</td>
-                                    <td className="px-4">: 0342-6453882</td>
+                                    <td className="px-4">:+62 812-1661-0559</td>
                                 </tr>
                                 <tr>
                                     <td className="px-4">Email</td>
-                                    <td className="px-4">: customer@cocoperkasa.com</td>
+                                    <td className="px-4">: ptjavaagroglobalindo@gmail.com</td>
                                 </tr>
                             </tbody></table>
                     </div>
