@@ -4,48 +4,52 @@ import sun from './img/part/Sun.png'
 import Modals from './productModals'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 // import Dropdown from './dropdown'
 // import Categories from './categories'
 
+// import briket1 from './img/briket1.jpg'
+// import briket2 from './img/briket2.jpg'
+import briket3 from './img/briket3.jpg'
+
 
 const Product = () => {
-    const [data, setData] = useState([])
+    // const [data, setData] = useState( [] )
 
-    useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-            .then(res => {
-                setData(res.data)
-            }).catch(err => console.log(err))
-    }, [])
+    // useEffect( () => {
+    //     axios.get( 'https://jsonplaceholder.typicode.com/posts' )
+    //         .then( res => {
+    //             setData( res.data )
+    //         } ).catch( err => console.log( err ) )
+    // }, [] )
 
-    const card = data.map((data, index) => {
-        return (
-            <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-                <button onClick={() => setModal(true)}>
-                    <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                </button>
-                <div className="p-5">
-                    <p className="inline-flex cursor-pointer" onClick={() => setModal(true)}>
-                        <h5 className="text-gray-900 font-bold text-xl sm:text-2xl tracking-tight mb-2">{data.title}</h5>
-                    </p>
-                    <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
-                        2021 so far, in reverse chronological order.</p>
-                    <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                        <i class="fab fa-whatsapp mr-2"></i>  Call Us
-                    </button>
-                    <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal(true)}>
-                        Read more
-                    </button>
-                </div>
-            </div>
-        )
-    })
+    // const card = data.map( ( data, index ) => {
+    //     return (
+    //         <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+    //             <button onClick={() => setModal( true )}>
+    //                 <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+    //             </button>
+    //             <div className="p-5">
+    //                 <p className="inline-flex cursor-pointer" onClick={() => setModal( true )}>
+    //                     <h5 className="text-gray-900 font-bold text-xl sm:text-2xl tracking-tight mb-2">{data.title}</h5>
+    //                 </p>
+    //                 <p className="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of
+    //                     2021 so far, in reverse chronological order.</p>
+    //                 <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+    //                     <i class="fab fa-whatsapp mr-2"></i>  Call Us
+    //                 </button>
+    //                 <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+    //                     Read more
+    //                 </button>
+    //             </div>
+    //         </div>
+    //     )
+    // } )
 
-    const [modal, setModal] = useState(false)
+    const [modal, setModal] = useState( false )
     return (
         <div className="pt-24 w-screen overflow-x-hidden">
             {modal && <Modals closeModal={setModal} />}
@@ -90,13 +94,80 @@ const Product = () => {
             <div className="flex justify-center">
                 <button
                     class="w-44 px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">
-                    lorem</button>
+                    Bricket</button>
             </div>
 
             {/* Product Quality */}
             <section className="container mx-auto mt-24 mb-12">
                 <div className="grid grid-flow-row grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 m-5">
-                    {card}
+                    {/* {card} */}
+                    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+                        <button onClick={() => setModal( true )}>
+                            <img className="rounded-t-lg" src={briket3} alt="" />
+                        </button>
+                        <div className="p-5">
+                            <p className="inline-flex cursor-pointer" onClick={() => setModal( true )}>
+                                <h5 className="text-gray-900 font-bold text-xl sm:text-2xl tracking-tight mb-2">Grade A</h5>
+                            </p>
+                            <p className="font-normal text-gray-700 mb-3"> Material 100 % Coconut charcoal al Briquettes, calorie value 7000-7200 Kilo calorie, Total Moisture 7%, Ash Contain 2% and white ash, Fixed Carbon 80% - 85%
+                            </p>
+                            <div class="px-6 pt-4 pb-2">
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">master box included</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">customized</span>
+                            </div>
+                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                            </button>
+                            <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                                Read more
+                            </button>
+                        </div>
+                    </div>
+                    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+                        <button onClick={() => setModal( true )}>
+                            <img className="rounded-t-lg" src={briket3} alt="" />
+                        </button>
+                        <div className="p-5">
+                            <p className="inline-flex cursor-pointer" onClick={() => setModal( true )}>
+                                <h5 className="text-gray-900 font-bold text-xl sm:text-2xl tracking-tight mb-2">Grade A</h5>
+                            </p>
+                            <p className="font-normal text-gray-700 mb-3"> Material 100 % Coconut charcoal al Briquettes, calorie value 7000-7200 Kilo calorie, Total Moisture 7%, Ash Contain 2% and white ash, Fixed Carbon 80% - 85%
+                            </p>
+                            <div class="px-6 pt-4 pb-2">
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">master box included</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">customized</span>
+                            </div>
+                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                            </button>
+                            <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                                Read more
+                            </button>
+                        </div>
+                    </div>
+                    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+                        <button onClick={() => setModal( true )}>
+                            <img className="rounded-t-lg" src={briket3} alt="" />
+                        </button>
+                        <div className="p-5">
+                            <p className="inline-flex cursor-pointer" onClick={() => setModal( true )}>
+                                <h5 className="text-gray-900 font-bold text-xl sm:text-2xl tracking-tight mb-2">Grade A</h5>
+                            </p>
+                            <p className="font-normal text-gray-700 mb-3"> Material 100 % Coconut charcoal al Briquettes, calorie value 7000-7200 Kilo calorie, Total Moisture 7%, Ash Contain 2% and white ash, Fixed Carbon 80% - 85%
+                            </p>
+                            <div class="px-6 pt-4 pb-2">
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">master box included</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">customized</span>
+                            </div>
+                            <button className="mr-2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                                <i class="fab fa-whatsapp mr-2"></i>  Call Us
+                            </button>
+                            <button className="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" onClick={() => setModal( true )}>
+                                Read more
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </section>
             {/* Title Quality */}
