@@ -2,18 +2,20 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 const Header = () => {
-    const [navbar, setNavbar] = useState(false)
+    const [navbar, setNavbar] = useState( false )
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState( false )
 
     const changeBackground = () => {
-        if (window.scrollY >= 80) {
-            setNavbar(true)
-        } else {
-            setNavbar(false)
+        if ( window.scrollY >= 80 )
+        {
+            setNavbar( true )
+        } else
+        {
+            setNavbar( false )
         }
     }
-    window.addEventListener('scroll', changeBackground)
+    window.addEventListener( 'scroll', changeBackground )
     return (
         <div className="relative">
             <a href="https://web.whatsapp.com/send?phone=6281216610559&text=Helo Java Agro Globalindo, I'm interested in your product .." className="flex flex-row w-40 h-auto top-24 sm:top-28 right-5 fixed bg-green-500 hover:bg-green-400 px-3 lg:py-4 py-2 lg:w-44 rounded-tl-full rounded-bl-full rounded-br-full z-100">
@@ -29,7 +31,7 @@ const Header = () => {
                             </div>
                             <div className="flex lg:hidden">
                                 <button type="button"
-                                    onClick={() => setIsOpen(!isOpen)}
+                                    onClick={() => setIsOpen( !isOpen )}
                                     className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
                                     aria-label="toggle menu">
                                     <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
@@ -50,8 +52,8 @@ const Header = () => {
                                     to="/">Home</Link>
                                 <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
                                     to="/product">Our Product</Link>
-                                <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
-                                    to="/faq">FAQ</Link>
+                                {/* <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
+                                    to="/faq">FAQ</Link> */}
                                 <Link className={navbar ? 'my-1 text-sm font-medium navbar-text lg:mx-4 lg:my-0' : 'my-1 text-sm font-medium navbar-first lg:mx-4 lg:my-0'}
                                     to="/about">About Us</Link>
                             </div>
