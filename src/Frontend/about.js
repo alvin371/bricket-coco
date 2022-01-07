@@ -26,8 +26,8 @@ const About = () => {
                             <div class="navbar">
                                 <div class="w-4/5 sm:max-w-lg text-left absolute left-11 md:left-32 md:top-24 sm:top-20 top-2 bg-gray-50 bg-opacity-90 shadow-lg md:p-5 p-2 rounded-lg">
                                     <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
-                                        class="text-yellow-500">Selamat Datang!</span><br /> Java Agro Globalindo</h1>
-                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik</p>
+                                        class="text-yellow-500">Welcome!</span><br /> Java Agro Globalindo</h1>
+                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Providing quality products with the best service.</p>
                                     <button
                                         class="w-full px-8 sm:py-4 py-2 sm:mt-6 mt-2 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
                                         Now</button>
@@ -43,8 +43,8 @@ const About = () => {
                             <div class="navbar">
                                 <div class="w-4/5 sm:max-w-lg text-left absolute left-11 md:left-32 md:top-24 sm:top-20 top-2 bg-gray-50 bg-opacity-90 shadow-lg md:p-5 p-2 rounded-lg">
                                     <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
-                                        class="text-yellow-500">Selamat Datang!</span><br /> Java Agro Globalindo</h1>
-                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik</p>
+                                        class="text-yellow-500">Welcome!</span><br /> Java Agro Globalindo</h1>
+                                    <p class="text-xs sm:text-sm lg:text-base mt-2 text-gray-600 dark:text-gray-400">Providing quality products with the best service.</p>
                                     <button
                                         class="w-full px-8 sm:py-4 py-2 sm:mt-6 mt-2 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">Shop
                                         Now</button>
@@ -62,10 +62,10 @@ const About = () => {
             {/* Company Profile */}
             <section className="container mx-auto">
                 <div className="grid grid-cols-1 sm:flex">
-                    <div className=" sm:w-1/2 mr-5 sm:mr-0">
-                        <img src={company} alt="" className="m-5 sm:w-4/5 h-4/5 shadow-lg" />
+                    <div className=" sm:w-1/2 m-5">
+                        <img src={company} alt="" className="sm:w-5/5 lg:w-4/5 mx-auto h-auto shadow-lg" />
                     </div>
-                    <div className=" sm:w-1/2 mx-3">
+                    <div className=" sm:w-1/2 mx-5">
                         <p className="text-left font-normal text-base mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Proin venenatis sed magna at pharetra. Nulla
                             hendrerit, libero sed rhoncus hendrerit, felis mi volutpat tellus, ut efficitur mi est id lectus.
@@ -82,7 +82,7 @@ const About = () => {
                     <div className>
                         <h1 className="font-bold text-4xl text-center mb-10">We Are Registered On</h1>
                     </div>
-                    <div className="xl:flex xl:flex-row xl:justify-start grid grid-cols-6 lg:grid-cols-2">
+                    <div className="xl:flex xl:flex-row xl:justify-center grid grid-cols-6 lg:grid-cols-2">
                         <img src={kemendag} className="col-start-2 col-span-4 lg:col-auto xl:w-auto xl:h-32 xl:m-5 " alt="" />
                         <img src={kemenkunham} className="col-start-1 col-span-3 lg:col-auto xl:w-auto xl:h-32 xl:m-5" alt="" />
                         <img src={sucofindo} className="col-end-6 col-span-2 lg:col-auto xl:w-auto xl:h-32 xl:m-5" alt="" />
@@ -94,17 +94,17 @@ const About = () => {
             <section className="container mx-auto mt-24 mb-12">
                 <div class="grid grid-cols-1 lg:flex lg:flex-row lg:justify-center justify-items-center">
                     <div class="flex flex-col justified-center my-5">
-                        <img src={Founder} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
+                        <img src={Founder} alt="" className="rounded-full mx-auto sm:mx-10 w-64 h-64 object-cover" />
                         <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Founder</h1>
                         <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Yasa Wahyudi</p></button>
                     </div>
                     <div class="flex flex-col justified-center my-5">
-                        <img src={Revo} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
+                        <img src={Revo} alt="" className="rounded-full mx-auto sm:mx-10 w-64 h-64 object-cover" />
                         <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Product Development And Logistics</h1>
                         <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Revoliansyah Nur Rasyid</p></button>
                     </div>
                     <div class="flex flex-col justified-center my-5">
-                        <img src={Elsa} alt="" className="rounded-full mx-10 w-64 h-64 object-cover" />
+                        <img src={Elsa} alt="" className="rounded-full mx-auto sm:mx-10 w-64 h-64 object-cover" />
                         <h1 className="drop-shadow-2xl text-center font-semibold text-lg mt-4">Bussiness And Legal</h1>
                         <button className="rounded-lg bg-red-500 hover:bg-red-400 px-10 flex flex-row py-2 mx-auto"><p className="text-white font-semibold">Elsa Ansori</p></button>
                     </div>
@@ -194,7 +194,7 @@ const About = () => {
                                     <td className="px-4">: Pasuruan Indonesia</td>
                                 </tr>
                                 <tr>
-                                    <td className="px-4">Telp</td>
+                                    <td className="px-4">Call</td>
                                     <td className="px-4">:+62 812-1661-0559</td>
                                 </tr>
                                 <tr>
