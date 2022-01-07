@@ -34,8 +34,8 @@ const Index = () => {
                             <div class="navbar">
                                 <div class="invisible sm:visible sm:w-2/5 md:w-4/12 lg:w-3/5 sm:max-w-sm lg:max-w-lg text-left absolute left-10 top-16 lg:left-32 lg:top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
                                     <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
-                                        class="text-yellow-500">Selamat Datang! </span>Java Agro Globalindo</h1>
-                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik .</p>
+                                        class="text-yellow-500">Welcome! </span>Java Agro Globalindo</h1>
+                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Give quality products with the best service.</p>
                                     <button
                                         class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">
                                         Shop Now</button>
@@ -55,8 +55,8 @@ const Index = () => {
             {/* Greetings */}
             <section className="container mx-auto my-4">
                 <div className="flex flex-col justify-center">
-                    <h1 className="font-bold text-center text-3xl text-blue-900">All Type Komoditas  <span className="text-yellow-500">with Premium Quality</span></h1>
-                    <p className="font-regular text-xl text-center mx-auto w-4/5 sm:w-3/6">Product Quality : Premium Komoditi, Medium Komoditi, Standard Komoditi</p>
+                    <h1 className="font-bold text-center text-3xl text-blue-900">All Type Commodities  <span className="text-yellow-500">with Premium Quality</span></h1>
+                    <p className="font-regular text-xl text-center mx-auto w-4/5 sm:w-3/6">Product Quality : Premium Commodity, Medium Commodity, Standard Commodity</p>
                 </div>
             </section>
             {/* Card */}
@@ -64,19 +64,19 @@ const Index = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     <div className="card w-72 h-36 text-center box-border shadow-lg rounded-lg relative">
                         <img src={card1} alt="" className="absolute card-icon" />
-                        <h1 className="font-semibold text-blue-800 pt-16 pb-3 text-xl">Kemudahan Pembayaran</h1>
+                        <h1 className="font-semibold text-blue-800 pt-16 pb-3 text-xl">Ease of Payment</h1>
                         {/* <p className="text-based font-regular">Simple and secure control of your organization’s financial and legal
                             transactions. Send customized invoices and contracts</p> */}
                     </div>
                     <div className="card w-72 h-36 text-center box-border shadow-lg rounded-lg relative">
                         <img src={card2} alt="" className="absolute card-icon" />
-                        <h1 className="font-semibold text-blue-800 pt-16 pb-3 text-xl">Pengiriman Tepat Waktu</h1>
+                        <h1 className="font-semibold text-blue-800 pt-16 pb-3 text-xl">On Time Delivery</h1>
                         {/* <p className="text-based font-regular">Simple and secure control of your organization’s financial and legal
                             transactions. Send customized invoices and contracts</p> */}
                     </div>
                     <div className="card w-72 h-36 text-center box-border shadow-lg rounded-lg relative">
                         <img src={card3} alt="" className="absolute card-icon" />
-                        <h1 className="font-semibold text-blue-800 pt-16 pb-3 text-xl">Produk Bergaransi</h1>
+                        <h1 className="font-semibold text-blue-800 pt-16 pb-3 text-xl">Guaranteed Products</h1>
                         {/* <p className="text-based font-regular">Simple and secure control of your organization’s financial and legal
                             transactions. Send customized invoices and contracts</p> */}
                     </div>
@@ -88,9 +88,9 @@ const Index = () => {
                     <div className="relative w-full text-left ml-14">
                         <img src={ellipse} alt="" className="absolute part-vid-capt" />
                         <h1 className="font-bold text-3xl text-blue-900 w-3/5 z-10">
-                            Komoditas Premium Indonesia<span className="text-yellow-500">, Fokus di kualitas produksi</span>
+                            Indonesian Premium Commodities<span className="text-yellow-500">, Focus on production quality</span>
                         </h1>
-                        <p className="font-regular text-lg text-gray-900 mt-5 w-4/5">Kami bermitra dengan supplier komoditas dari seluruh Indonesia, dengan system quality control terbaik.</p>
+                        <p className="font-regular text-lg text-gray-900 mt-5 w-4/5">We partner with commodity suppliers from all over Indonesia, with the best quality control system.</p>
                     </div>
                     <div className="relative ml-4 xl:ml-52 lg:mt-0 mt-20">
                         {/* video youtube */}
@@ -105,7 +105,7 @@ const Index = () => {
                 <div className="w-full grid grid-cols-1 lg:grid-cols-2">
                     <div className="w-5/6 py-24 ml-14 text-left">
                         <h1 className="text-blue-900 font-bold text-3xl w-3/5 leading-normal"><span className="text-yellow-500">Commitmen</span> to Provide Best Quality</h1>
-                        <p className="font-regular text-lg mt-5">Mengawasi setiap tahap proses produksi, menjaga proses produksi untuk hasil dengan kualitas terbaik</p>
+                        <p className="font-regular text-lg mt-5">Supervise every stage of the production process, maintain the production process for the highest quality results</p>
                     </div>
                     <div className="w-5/6 flex justify-end mr-10">
                         <img src={owner} alt="" className="w-3/4 h-auto" />
@@ -232,7 +232,7 @@ const Index = () => {
                                     <td className="px-4">: Pasuruan Indonesia</td>
                                 </tr>
                                 <tr>
-                                    <td className="px-4">Telp</td>
+                                    <td className="px-4">Call</td>
                                     <td className="px-4">:+62 812-1661-0559</td>
                                 </tr>
                                 <tr>

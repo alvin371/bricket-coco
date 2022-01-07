@@ -68,8 +68,8 @@ const Product = () => {
                             <div class="navbar">
                                 <div class="invisible sm:visible sm:w-2/5 md:w-4/12 lg:w-3/5 sm:max-w-sm lg:max-w-lg text-left absolute left-10 top-16 lg:left-32 lg:top-48 bg-gray-50 bg-opacity-90 shadow-lg p-5 rounded-lg">
                                     <h1 class="w-4/5 font-bold text-blue-800 uppercase dark:text-white lg:text-3xl sm:text-lg md:text-xl"><span
-                                        class="text-yellow-500">Selamat Datang! </span>Java Agro Globalindo</h1>
-                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Memberikan Kualitas produk dengan pelayanan terbaik .</p>
+                                        class="text-yellow-500">Welcome! </span>Java Agro Globalindo</h1>
+                                    <p class="mt-2 sm:text-xs md:text-sm lg:text-base text-gray-600 dark:text-gray-400">Providing quality products with the best service.</p>
                                     <button
                                         class="w-full px-8 py-4 mt-6 text-xs font-medium text-white uppercase transition-colors duration-200 transform bg-yellow-500 rounded-full lg:w-auto hover:bg-yellow-500 focus:outline-none focus:bg-indigo-500">
                                         Shop Now</button>
@@ -264,7 +264,7 @@ const Product = () => {
                                     <td className="px-4">: Pasuruan Indonesia</td>
                                 </tr>
                                 <tr>
-                                    <td className="px-4">Telp</td>
+                                    <td className="px-4">Call</td>
                                     <td className="px-4">:+62 812-1661-0559</td>
                                 </tr>
                                 <tr>
